@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="248.5" y1="10" x2="248.5" y2="490.378" id="gradient-1">
+      <stop offset="0" style="stop-color: rgba(188, 255, 215, 1)"/>
+      <stop offset="1" style="stop-color: rgba(86, 255, 154, 1)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="248.5" y1="10" x2="248.5" y2="490.378" id="gradient-0">
+      <stop offset="0" style="stop-color: rgba(147, 210, 255, 1)"/>
+      <stop offset="1" style="stop-color: rgba(45, 167, 255, 1)"/>
+    </linearGradient>
+  </defs>
+  <path d="M 248.5 10 L 462 130.094 L 462 370.283 L 248.5 490.378 L 35 370.284 L 35 130.094 Z" style="fill-rule: nonzero; stroke-width: 17px; fill: url('#gradient-1'); paint-order: fill; stroke: url('#gradient-0'); stroke-linecap: square;" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, -7.105427357601002e-15, -7.105427357601002e-15)" bx:shape="n-gon 248.5 250.189 246.529 240.189 6 0 1@52541a9c"/>
+  <text style="fill: rgb(146, 146, 146); font-family: Arial, sans-serif; font-size: 10.1px; white-space: pre; transform-origin: 152.35px 153.281px;" transform="matrix(1, 0.000001, -0.000001, 1, 130.327576932478, 167.702135439815)" x="108.989" y="157.042">PALMR.R.LY.GD.EDU.KG</text>
+  <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff00" stroke-width="0.25mm" fill="#4285F4" style="stroke: rgba(255, 255, 255, 0); stroke-width: 0.25mm; fill: rgb(66, 133, 244); transform-origin: 46.8008px -1.30764px;" transform="matrix(1.388864994049, 0, 0, 1.388864994049, 77.323488101311, 151.307637383945)">
+    <path d="M 48.8 85.21 L 18.4 85.21 L 18.4 143.21 L 0 143.21 L 0 0.01 L 48.8 0.01 Q 67.4 0.01 80.4 12.41 A 41.424 41.424 0 0 1 90.795 27.348 A 40.952 40.952 0 0 1 93.6 42.61 Q 93.6 60.81 80.4 73.01 A 43.76 43.76 0 0 1 50.26 85.191 A 56.88 56.88 0 0 1 48.8 85.21 Z M 49.2 17.61 L 18.4 17.61 L 18.4 67.61 L 49.2 67.61 A 26.78 26.78 0 0 0 58.533 66.038 A 23.718 23.718 0 0 0 67.4 60.21 A 25.036 25.036 0 0 0 73.281 51.279 A 24.461 24.461 0 0 0 74.8 42.61 A 23.757 23.757 0 0 0 67.629 25.442 A 30.741 30.741 0 0 0 67.4 25.21 A 23.852 23.852 0 0 0 50.054 17.621 A 31.211 31.211 0 0 0 49.2 17.61 Z" vector-effect="non-scaling-stroke"/>
+  </g>
+  <g id="g-1" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff00" stroke-width="0.25mm" fill="#DB4437" style="stroke: rgba(255, 255, 255, 0); stroke-width: 0.25mm; fill: rgb(219, 68, 55); transform-origin: 43.4011px -200.19px;" transform="matrix(0.691221237183, 0, 0, 0.691221237183, 104.132267126681, 341.814822183113)">
+    <path d="M 86.802 40.802 L 86.802 101.202 L 69.202 101.202 L 69.202 87.602 L 68.402 87.602 A 41.588 41.588 0 0 1 59.006 97.674 A 34.06 34.06 0 0 1 38.002 104.402 A 45.061 45.061 0 0 1 24.517 102.464 A 37.103 37.103 0 0 1 10.902 94.802 A 31.823 31.823 0 0 1 2.478 83.437 A 31.722 31.722 0 0 1 0.002 70.802 A 32.335 32.335 0 0 1 2.049 59.08 A 28.925 28.925 0 0 1 11.502 46.602 A 40.004 40.004 0 0 1 25.894 39.579 Q 31.604 38.034 38.346 37.696 A 77.044 77.044 0 0 1 42.202 37.602 Q 58.602 37.602 69.202 43.602 L 69.202 39.402 A 20.715 20.715 0 0 0 62.578 24.004 A 27.488 27.488 0 0 0 61.602 23.102 Q 54.002 16.402 43.802 16.402 Q 28.402 16.402 19.402 29.402 L 3.202 19.202 Q 16.602 0.002 42.802 0.002 A 61.657 61.657 0 0 1 56.083 1.349 Q 65.018 3.319 71.679 8.172 A 37 37 0 0 1 75.002 10.902 A 35.901 35.901 0 0 1 86.018 31.543 A 52.27 52.27 0 0 1 86.802 40.802 Z M 19.002 71.202 A 14.38 14.38 0 0 0 23.836 82.118 A 19.891 19.891 0 0 0 25.102 83.202 A 22.373 22.373 0 0 0 39.019 87.999 A 27.767 27.767 0 0 0 39.402 88.002 A 28.916 28.916 0 0 0 58.665 80.693 A 37.906 37.906 0 0 0 60.102 79.402 A 30.313 30.313 0 0 0 66.323 71.302 A 25.984 25.984 0 0 0 69.202 59.202 A 28.867 28.867 0 0 0 59.646 54.321 Q 53.384 52.402 45.202 52.402 Q 34.002 52.402 26.502 57.802 A 20.815 20.815 0 0 0 22.271 61.772 A 14.828 14.828 0 0 0 19.002 71.202 Z" vector-effect="non-scaling-stroke"/>
+  </g>
+  <g id="g-2" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff00" stroke-width="0.25mm" fill="#F4B400" style="stroke: rgba(255, 255, 255, 0); stroke-width: 0.25mm; fill: rgb(244, 180, 0);" transform="matrix(2.3127899169921875, 0, 0, 1.3889670372009275, 192.70581341841535, 151.80000531375413)">
+    <path d="M 80.4 125.6 L 80.4 143.2 L 0 143.2 L 0 0 L 18.4 0 L 18.4 125.6 L 80.4 125.6 Z" vector-effect="non-scaling-stroke"/>
+  </g>
+  <g id="g-3" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff00" stroke-width="0.25mm" fill="#0F9D58" style="stroke: rgba(255, 255, 255, 0); stroke-width: 0.25mm; fill: rgb(15, 157, 88);" transform="matrix(1.1848559379577634, 0, 0, 1.219280958175659, 216.23811662551924, 151.80000531375413)">
+    <path d="M 18.4 58.2 L 18.4 143.2 L 0 143.2 L 0 0 L 18.4 0 L 68.2 87.2 L 69 87.2 L 118.8 0 L 137.2 0 L 137.2 143.2 L 118.8 143.2 L 118.8 58.2 L 119.6 34.2 L 118.8 34.2 L 74 112.8 L 63.2 112.8 L 18.4 34.2 L 17.6 34.2 L 18.4 58.2 Z" vector-effect="non-scaling-stroke"/>
+  </g>
+  <g id="g-4" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff00" stroke-width="0.25mm" fill="#4285F4" style="stroke:#ffffff00;stroke-width:0.25mm;fill:#4285F4" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 382.49915120749387, 249.8198279413554)">
+    <path d="M 18.4 46.8 L 18.4 100.8 L 0 100.8 L 0 2.8 L 17.6 2.8 L 17.6 18.8 L 18.4 18.8 Q 21.2 11 29.9 5.5 A 39.42 39.42 0 0 1 36.919 1.939 A 28.187 28.187 0 0 1 47 0 A 44.457 44.457 0 0 1 53.104 0.396 Q 57.275 0.975 60.6 2.4 L 55 20.2 Q 51.6 18.8 44.2 18.8 A 23.279 23.279 0 0 0 27.817 25.463 A 31.865 31.865 0 0 0 26.1 27.2 Q 18.4 35.6 18.4 46.8 Z" vector-effect="non-scaling-stroke"/>
+  </g>
+</svg>
