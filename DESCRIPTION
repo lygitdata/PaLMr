@@ -1,0 +1,21 @@
+Package: PaLMr
+Type: Package
+Title: Interface for 'Google Pathways Language Model (PaLM)'
+Version: 0.1.4
+Authors@R: c(
+    person(
+      given = "Li", family = "Yuan", role = c("aut", "cre"), 
+      email = "lyuan@gd.edu.kg"
+    )
+  )
+Maintainer: Li Yuan <lyuan@gd.edu.kg>
+Description: 'Google's 'PaLM' <https://developers.generativeai.google/> as a coding and writing assistant designed for 'R' and 'RStudio.' With a range of functions, including natural language processing and coding optimization, to assist R developers in simplifying tedious coding tasks and content searching.
+License: CC BY 4.0
+URL: https://palmr.r.ly.gd.edu.kg/
+BugReports: https://github.com/lygitdata/PaLMr/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Imports:
+  httr,
+  jsonlite

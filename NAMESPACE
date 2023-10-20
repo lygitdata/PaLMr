@@ -1,0 +1,9 @@
+export(setupPALM)
+export(getTextPALM)
+export(getReferencePALM)
+export(fixGrammarPALM)
+export(explainCodePALM)
+export(optimizeCodePALM)
+
+import(httr)
+import(jsonlite)
