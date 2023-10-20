@@ -20,7 +20,7 @@ URL: https://palmr.r.ly.gd.edu.kg/
 
 Imports: `httr`, `jsonlite`
 
-[![CRAN](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://cran.r-project.org/package=PaLMr)
+[![CRAN](https://cranlogs.r-pkg.org/badges/PaLMr)](https://cran.r-project.org/package=PaLMr)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![build pass](https://img.shields.io/circleci/build/github/badges/shields/master.svg)](https://github.com/lygitdata/PaLMr/releases)
 [![github](https://img.shields.io/badge/GitHub-100000)](https://github.com/lygitdata/PaLMr)
