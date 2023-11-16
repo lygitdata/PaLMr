@@ -4,7 +4,7 @@
 
 <HR>
 
-<img src="https://palmr.r.ly.gd.edu.kg/img/PaLMr_logo.svg" width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Google_PaLM_Logo.svg" width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png" width="100px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" height="90px">
+<img src="https://palmr.r.ly.gd.edu.kg/img/PaLMr_logo.svg" width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Google_PaLM_Logo.svg" width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png" width="100px"/>
 
 ## 1. Basic Information
 
