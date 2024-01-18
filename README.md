@@ -1,10 +1,10 @@
-# PaLMr - Interface for Google Pathways Language Model (PaLM)
+<p style="color: red; font-size: 20px;">Gemini is coming. Please check the new R package "GenAI" (https://github.com/GitData-GA/GenAI), which supports both Google's models and OpenAI's models.</p>
 
-<!--<a href="https://palmr.r.ly.gd.edu.kg/"><img src="https://ly.gd.edu.kg/assets/img/us.svg" width="20px"/>&nbsp;English</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://palmr.r.ly.gd.edu.kg/cn.html"><img src="https://ly.gd.edu.kg/assets/img/cn.svg" width="20px"/>&nbsp;中文</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://palmr.r.ly.gd.edu.kg/ru.html"><img src="https://ly.gd.edu.kg/assets/img/ru.svg" width="20px"/>&nbsp;Русский</a>-->
+# PaLMr - Interface for Google Pathways Language Model (PaLM)
 
 <HR>
 
-<img src="https://palmr.r.ly.gd.edu.kg/img/PaLMr_logo.svg" width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Google_PaLM_Logo.svg" width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png" width="100px"/>
+<img src="https://palmr.r.ly.gd.edu.kg/img/PaLMr_logo.svg" width="100px">
 
 ## 1. Basic Information
 
