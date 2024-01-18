@@ -1,4 +1,4 @@
-# Gemini is on the horizon. Kindly explore the latest R package, "GenAI" available at (https://github.com/GitData-GA/GenAI). This package seamlessly integrates with both Google's and OpenAI's models.
+# Gemini is on the horizon. Kindly explore the latest R package, "GenAI" available at https://github.com/GitData-GA/GenAI. This package seamlessly integrates with both Google's and OpenAI's models.
 
 <img src="https://genai.gd.edu.kg/assets/img/logo.jpg" width="300px" alt="Logo">
 
