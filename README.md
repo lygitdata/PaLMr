@@ -1,4 +1,8 @@
-<p style="color: red; font-size: 20px;">Gemini is coming. Please check the new R package "GenAI" (https://github.com/GitData-GA/GenAI), which supports both Google's models and OpenAI's models.</p>
+# Gemini is on the horizon. Kindly explore the latest R package, "GenAI" available at (https://github.com/GitData-GA/GenAI). This package seamlessly integrates with both Google's and OpenAI's models.
+
+<img src="https://genai.gd.edu.kg/assets/img/logo.jpg" width="300px" alt="Logo">
+
+<HR>
 
 # PaLMr - Interface for Google Pathways Language Model (PaLM)
 
