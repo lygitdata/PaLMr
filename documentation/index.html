@@ -1,1 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+        <link rel="icon" type="image/x-icon" href="https://palmr.ly.gd.edu.kg/img/PaLMr_logo.svg">
+        <meta itemprop="image" content="https://palmr.ly.gd.edu.kg/img/PaLMr_logo.svg">
+        <title>PaLMr - Documentation</title>
+        <meta name="description" content="This document provides detailed function reference manual of the PaLMr package in the R programming language.">
 
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content='PaLMr - Documentation'>
+        <meta itemprop="description" content="This document provides detailed function reference manual of the PaLMr package in the R programming language.">
+        <meta itemprop="image" content="https://palmr.ly.gd.edu.kg/img/PaLMr_logo.svg">
+        
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://palmr.ly.gd.edu.kg/documentation/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content='PaLMr - Documentation'>
+        <meta property="og:description" content="This document provides detailed function reference manual of the PaLMr package in the R programming language.">
+        <meta property="og:image" content="https://palmr.ly.gd.edu.kg/img/PaLMr_logo.svg">
+        
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content='PaLMr - Documentation'>
+        <meta name="twitter:description" content="This document provides detailed function reference manual of the PaLMr package in the R programming language.">
+        <meta name="twitter:image" content="https://palmr.ly.gd.edu.kg/img/PaLMr_logo.svg">
+
+        <!-- Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELSZ3SFQ2D"></script><script>window.dataLayer=window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-ELSZ3SFQ2D');</script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="https://static.gd.edu.kg/css/kb/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://static.gd.edu.kg/css/kb/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://static.gd.edu.kg/css/kb/magnific-popup.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://static.gd.edu.kg/css/kb/github.css" />
+        <link rel="stylesheet" type="text/css" href="https://static.gd.edu.kg/css/kb/stylesheet.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/default.min.css">
+    </head>
+    <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+        <div class="preloader">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="main-wrapper">
+            <header id="header" class="sticky-top">
+                <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+                    <div class="container-fluid">
+                        <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+                        <a class="logo ml-md-3" href="https://palmr.gd.edu.kg/"> <img src="https://palmr.ly.gd.edu.kg/img/PaLMr_logo.svg" height=50px/ alt="logo"> </a> 
+                        <span class="text-2 ml-2"></span> 
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+                        <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+                            <ul class="navbar-nav">
+                                <li><a href="https://palmr.ly.gd.edu.kg/documentation/">Documentation</p></li>
+                                <li>
+                                    <a href="https://github.com/lygitdata/PaLMr" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div id="content" role="main">
+                <div class="idocs-navigation bg-light">
+                    <ul class="nav flex-column ">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#start">PaLMr - Documentation</a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a class="nav-link" href="#prerequisites">Prerequisites</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#installation">Installation</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#setup">Setup</a>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item"><a class="nav-link" href="#palm_connect"><code>palm.connect</code></a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link active" href="#text_generation">Text Generation</a>
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item"><a class="nav-link" href="#palm_txt"><code>palm.txt</code></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#palm_txt_explain_code"><code>palm.txt.explain.code</code></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#palm_txt_fix_grammar"><code>palm.txt.fix.grammar</code></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#palm_txt_get_reference"><code>palm.txt.get.reference</code></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#palm_txt_optimize_code"><code>palm.txt.optimize.code</code></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="idocs-content">
+                    <div class="container">
+                        <section id="start">
+                            <h1>PaLMr - Documentation</h1>
+                            <p><i>Last update: 2024/01/21</i></p>
+                            <p>
+                               'Google Pathways Language Model 2 (PaLM 2)' as a coding and writing assistant designed for 'R'. With a range of functions, including natural language processing and coding optimization, to assist 'R' developers in simplifying tedious coding tasks and content searching.
+                            </p>
+                        </section>
+                        <hr>
+                        <section id="prerequisites">
+                            <h3>Prerequisites</h3>
+                            <p>Prior to utilizing the PaLMr package, several prerequisites must be met.</p>
+                            <ol>
+                                <li>
+                                    <p>Ensure that you possess an eligible device equipped with R.</p>
+                                </li>
+                                <li>
+                                    <p>Access to the internet is essential to generate text or engage in chat through PaLMr.</p>
+                                </li>
+                                <li>
+                                    <p>Obtain an API key from Google. To acquire an API key for Google's models, refer to: <a href="https://ai.google.dev/tutorials/setup" target="_blank">Get an API key</a></p>
+                                </li>
+                            </ol>
+                        <section>
+                        <hr>
+                        <section id="installation">
+                            <h3>Installation</h3>
+                            <p>
+                                1. Install the package from <a href="https://cran.r-project.org/package=PaLMr" target="_blank">The Comprehensive R Archive Network (CRAN)</a>.
+                            </p>
+                            <p>
+                                <pre><code class="language-r">install.packages("PaLMr")</code></pre>
+                            </p>
+                            <p>
+                                2. Install the package from PaLMr official website</a>.
+                            </p>
+                            <p>
+                                <pre><code class="language-r">install.packages("https://palmr.ly.gd.edu.kg/release/PaLMr_latest.tar.gz", repos=NULL, method="libcurl")</code></pre>
+                            </p>
+                        </section>
+                        <hr>
+                        <section id="setup">
+                            <h2>Setup</h2>
+                            <hr style="border-top: dotted 1px; color: grey;" />
+                            <section id="palm_connect">
+                                <h4><code>palm.connect</code><br>
+                                    <a href="https://github.com/lygitdata/PaLMr/blob/main/R/palm.connect.R" target="_blank"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIxLjkiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMjE5IDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSIgOiBPcGVuIGluIEdpdEh1YiI+CiAgPHRpdGxlPiA6IE9wZW4gaW4gR2l0SHViPC90aXRsZT4KICA8bGluZWFyR3JhZGllbnQgaWQ9IkZXQ2RkIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii4xIiBzdG9wLWNvbG9yPSIjRUVFIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxtYXNrIGlkPSJmbUxpZSI+PHJlY3Qgd2lkdGg9IjEyMTkiIGhlaWdodD0iMjAwIiByeD0iMzAiIGZpbGw9IiNGRkYiLz48L21hc2s+CiAgPGcgbWFzaz0idXJsKCNmbUxpZSkiPgogICAgPHJlY3Qgd2lkdGg9IjI2OSIgaGVpZ2h0PSIyMDAiIGZpbGw9IiM1NTUiLz4KICAgIDxyZWN0IHdpZHRoPSI5NTAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDhDIiB4PSIyNjkiLz4KICAgIDxyZWN0IHdpZHRoPSIxMjE5IiBoZWlnaHQ9IjIwMCIgZmlsbD0idXJsKCNGV0NkZCkiLz4KICA8L2c+CiAgPGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9IlZlcmRhbmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPgogICAgPHRleHQgeD0iMTkwIiB5PSIxNDgiIHRleHRMZW5ndGg9IjM5IiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIwLjI1Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMTgwIiB5PSIxMzgiIHRleHRMZW5ndGg9IjM5Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMzI0IiB5PSIxNDgiIHRleHRMZW5ndGg9Ijg1MCIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iMC4yNSI+T3BlbiBpbiBHaXRIdWI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMTQiIHk9IjEzOCIgdGV4dExlbmd0aD0iODUwIj5PcGVuIGluIEdpdEh1YjwvdGV4dD4KICA8L2c+CiAgPGltYWdlIHg9IjQwIiB5PSIzNSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMzAiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0EwT1RZZ05URXlJajQ4Y0dGMGFDQm1hV3hzUFNJalptWm1JaUJrUFNKTk1UWTFMamtnTXprM0xqUmpNQ0F5TFRJdU15QXpMall0TlM0eUlETXVOaTB6TGpNdU15MDFMall0TVM0ekxUVXVOaTB6TGpZZ01DMHlJREl1TXkwekxqWWdOUzR5TFRNdU5pQXpMUzR6SURVdU5pQXhMak1nTlM0MklETXVObnB0TFRNeExqRXROQzQxWXkwdU55QXlJREV1TXlBMExqTWdOQzR6SURRdU9TQXlMallnTVNBMUxqWWdNQ0EyTGpJdE1uTXRNUzR6TFRRdU15MDBMak10TlM0eVl5MHlMall0TGpjdE5TNDFMak10Tmk0eUlESXVNM3B0TkRRdU1pMHhMamRqTFRJdU9TNDNMVFF1T1NBeUxqWXROQzQySURRdU9TNHpJRElnTWk0NUlETXVNeUExTGprZ01pNDJJREl1T1MwdU55QTBMamt0TWk0MklEUXVOaTAwTGpZdExqTXRNUzQ1TFRNdE15NHlMVFV1T1MweUxqbDZUVEkwTkM0NElEaERNVEEyTGpFZ09DQXdJREV4TXk0eklEQWdNalV5WXpBZ01URXdMamtnTmprdU9DQXlNRFV1T0NBeE5qa3VOU0F5TXprdU1pQXhNaTQ0SURJdU15QXhOeTR6TFRVdU5pQXhOeTR6TFRFeUxqRWdNQzAyTGpJdExqTXROREF1TkMwdU15MDJNUzQwSURBZ01DMDNNQ0F4TlMwNE5DNDNMVEk1TGpnZ01DQXdMVEV4TGpRdE1qa3VNUzB5Tnk0NExUTTJMallnTUNBd0xUSXlMamt0TVRVdU55QXhMall0TVRVdU5DQXdJREFnTWpRdU9TQXlJRE00TGpZZ01qVXVPQ0F5TVM0NUlETTRMallnTlRndU5pQXlOeTQxSURjeUxqa2dNakF1T1NBeUxqTXRNVFlnT0M0NExUSTNMakVnTVRZdE16TXVOeTAxTlM0NUxUWXVNaTB4TVRJdU15MHhOQzR6TFRFeE1pNHpMVEV4TUM0MUlEQXRNamN1TlNBM0xqWXROREV1TXlBeU15NDJMVFU0TGprdE1pNDJMVFl1TlMweE1TNHhMVE16TGpNZ01pNDJMVFkzTGprZ01qQXVPUzAyTGpVZ05qa2dNamNnTmprZ01qY2dNakF0TlM0MklEUXhMalV0T0M0MUlEWXlMamd0T0M0MWN6UXlMamdnTWk0NUlEWXlMamdnT0M0MVl6QWdNQ0EwT0M0eExUTXpMallnTmprdE1qY2dNVE11TnlBek5DNDNJRFV1TWlBMk1TNDBJREl1TmlBMk55NDVJREUySURFM0xqY2dNalV1T0NBek1TNDFJREkxTGpnZ05UZ3VPU0F3SURrMkxqVXROVGd1T1NBeE1EUXVNaTB4TVRRdU9DQXhNVEF1TlNBNUxqSWdOeTQ1SURFM0lESXlMamtnTVRjZ05EWXVOQ0F3SURNekxqY3RMak1nTnpVdU5DMHVNeUE0TXk0MklEQWdOaTQxSURRdU5pQXhOQzQwSURFM0xqTWdNVEl1TVVNME1qZ3VNaUEwTlRjdU9DQTBPVFlnTXpZeUxqa2dORGsySURJMU1pQTBPVFlnTVRFekxqTWdNemd6TGpVZ09DQXlORFF1T0NBNGVrMDVOeTR5SURNMU1pNDVZeTB4TGpNZ01TMHhJRE11TXk0M0lEVXVNaUF4TGpZZ01TNDJJRE11T1NBeUxqTWdOUzR5SURFZ01TNHpMVEVnTVMwekxqTXRMamN0TlM0eUxURXVOaTB4TGpZdE15NDVMVEl1TXkwMUxqSXRNWHB0TFRFd0xqZ3RPQzR4WXkwdU55QXhMak11TXlBeUxqa2dNaTR6SURNdU9TQXhMallnTVNBekxqWXVOeUEwTGpNdExqY3VOeTB4TGpNdExqTXRNaTQ1TFRJdU15MHpMamt0TWkwdU5pMHpMall0TGpNdE5DNHpMamQ2YlRNeUxqUWdNelV1Tm1NdE1TNDJJREV1TXkweElEUXVNeUF4TGpNZ05pNHlJREl1TXlBeUxqTWdOUzR5SURJdU5pQTJMalVnTVNBeExqTXRNUzR6TGpjdE5DNHpMVEV1TXkwMkxqSXRNaTR5TFRJdU15MDFMakl0TWk0MkxUWXVOUzB4ZW0wdE1URXVOQzB4TkM0M1l5MHhMallnTVMweExqWWdNeTQySURBZ05TNDVJREV1TmlBeUxqTWdOQzR6SURNdU15QTFMallnTWk0eklERXVOaTB4TGpNZ01TNDJMVE11T1NBd0xUWXVNaTB4TGpRdE1pNHpMVFF0TXk0ekxUVXVOaTB5ZWlJdlBqd3ZjM1puUGdvPSIvPgo8L3N2Zz4=" alt="Open in GitHub"></a>
+                                </h4>
+                                <h4>Set up and connect to the Google PaLM 2 text model<h4>
+                                <h5>Usage</h5>
+                                <pre><code class="language-r">palm.connect(version, api, proxy = FALSE)</code></pre>
+                                <h5>Value</h5>
+                                <p>
+                                  If successful, the function returns a character vector containing the API key, model version, and proxy status. If the API response indicates an error, the function stops execution and provides an error message.
+                                </p>
+                                <h5>Description</h5>
+                                <p>
+                                  This function establishes a connection to the Google PaLM text model by specifying the API key, and model version.
+                                </p>
+                                <h5>Detail</h5>
+                                <p>
+                                  This function performs the necessary setup to connect to the Google PaLM 2 text model. It validates the provided API key and checks the correctness of the model version. If the input is valid, it constructs the API request and sends it to the PaLM 2 API endpoint.
+                                </p>
+                                <p>
+                                  If an error occurs during the API request, such as an invalid API key or input parameters, an error message is displayed. If the API request is successful, the function prints the model details to the console and returns a character vector with the API key, model version, and model type.
+                                </p>
+                                <div class="accordion" id="accordionDefault">
+                                  <div class="card">
+                                    <div class="card-header" id="palm_connect_ex">
+                                      <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#palm_connect_ex_collapse" aria-expanded="true">Example</a> </h5>
+                                    </div>
+                                    <div id="palm_connect_ex_collapse" class="collapse" data-parent="#accordionDefault">
+                                      <div class="card-body">
+                                        <a target="_blank" href="https://colab.research.google.com/github/lygitdata/PaLMr/blob/gh-pages/example/palmr_examples.ipynb">
+                                          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE3IiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMTciIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoMzB2MjBIMHoiLz48cGF0aCBmaWxsPSIjMDA3ZWM2IiBkPSJNMzAgMGg4N3YyMEgzMHoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDExN3YyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPjxzdmcgeD0iNHB4IiB5PSIwcHgiIHdpZHRoPSIyMnB4IiBoZWlnaHQ9IjIwcHgiIHZpZXdCb3g9Ii0yIDAgMjggMjQiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO2JvcmRlci1yYWRpdXM6IDFweDsiPjxwYXRoIHN0eWxlPSJmaWxsOiNlODcxMGE7IiBkPSJNMS45NzcsMTYuNzdjLTIuNjY3LTIuMjc3LTIuNjA1LTcuMDc5LDAtOS4zNTdDMi45MTksOC4wNTcsMy41MjIsOS4wNzUsNC40OSw5LjY5MWMtMS4xNTIsMS42LTEuMTQ2LDMuMjAxLTAuMDA0LDQuODAzQzMuNTIyLDE1LjExMSwyLjkxOCwxNi4xMjYsMS45NzcsMTYuNzd6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2Y5YWIwMDsiIGQ9Ik0xMi4yNTcsMTcuMTE0Yy0xLjc2Ny0xLjYzMy0yLjQ4NS0zLjY1OC0yLjExOC02LjAyYzAuNDUxLTIuOTEsMi4xMzktNC44OTMsNC45NDYtNS42NzhjMi41NjUtMC43MTgsNC45NjQtMC4yMTcsNi44NzgsMS44MTljLTAuODg0LDAuNzQzLTEuNzA3LDEuNTQ3LTIuNDM0LDIuNDQ2QzE4LjQ4OCw4LjgyNywxNy4zMTksOC40MzUsMTYsOC44NTZjLTIuNDA0LDAuNzY3LTMuMDQ2LDMuMjQxLTEuNDk0LDUuNjQ0Yy0wLjI0MSwwLjI3NS0wLjQ5MywwLjU0MS0wLjcyMSwwLjgyNkMxMy4yOTUsMTUuOTM5LDEyLjUxMSwxNi4zLDEyLjI1NywxNy4xMTR6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2U4NzEwYTsiIGQ9Ik0xOS41MjksOS42ODJjMC43MjctMC44OTksMS41NS0xLjcwMywyLjQzNC0yLjQ0NmMyLjcwMywyLjc4MywyLjcwMSw3LjAzMS0wLjAwNSw5Ljc2NGMtMi42NDgsMi42NzQtNi45MzYsMi43MjUtOS43MDEsMC4xMTVjMC4yNTQtMC44MTQsMS4wMzgtMS4xNzUsMS41MjgtMS43ODhjMC4yMjgtMC4yODUsMC40OC0wLjU1MiwwLjcyMS0wLjgyNmMxLjA1MywwLjkxNiwyLjI1NCwxLjI2OCwzLjYsMC44M0MyMC41MDIsMTQuNTUxLDIxLjE1MSwxMS45MjcsMTkuNTI5LDkuNjgyeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNNC40OSw5LjY5MUMzLjUyMiw5LjA3NSwyLjkxOSw4LjA1NywxLjk3Nyw3LjQxM2MyLjIwOS0yLjM5OCw1LjcyMS0yLjk0Miw4LjQ3Ni0xLjM1NWMwLjU1NSwwLjMyLDAuNzE5LDAuNjA2LDAuMjg1LDEuMTI4Yy0wLjE1NywwLjE4OC0wLjI1OCwwLjQyMi0wLjM5MSwwLjYzMWMtMC4yOTksMC40Ny0wLjUwOSwxLjA2Ny0wLjkyOSwxLjM3MUM4LjkzMyw5LjUzOSw4LjUyMyw4Ljg0Nyw4LjAyMSw4Ljc0NkM2LjY3Myw4LjQ3NSw1LjUwOSw4Ljc4Nyw0LjQ5LDkuNjkxeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNMS45NzcsMTYuNzdjMC45NDEtMC42NDQsMS41NDUtMS42NTksMi41MDktMi4yNzdjMS4zNzMsMS4xNTIsMi44NSwxLjQzMyw0LjQ1LDAuNDk5YzAuMzMyLTAuMTk0LDAuNTAzLTAuMDg4LDAuNjczLDAuMTljMC4zODYsMC42MzUsMC43NTMsMS4yODUsMS4xODEsMS44OWMwLjM0LDAuNDgsMC4yMjIsMC43MTUtMC4yNTMsMS4wMDZDNy44NCwxOS43Myw0LjIwNSwxOS4xODgsMS45NzcsMTYuNzd6Ii8+PC9zdmc+PHRleHQgeD0iMjQ1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB0ZXh0TGVuZ3RoPSIzMCI+IDwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE1MCIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48L2c+IDwvc3ZnPgo=" alt="Open In Colab"/>
+                                        </a>
+                                        <pre><code class="language-r">palm.model = palm.connect("v1beta3",
+                          "API_KEY",
+                          FALSE)
+palm.model</code></pre>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <h5>See Also</h5>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/SafetySetting" target="_blank">Safety Setting - Google AI for Developers</a>
+                                </p>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/HarmCategory" target="_blank">HarmCategory - Google AI for Developers</a>
+                                </p>
+                            </section>
+                        </section>
+                        <hr>
+                        <section id="text_generation">
+                            <h2>Text Generation</h2>
+                            <hr style="border-top: dotted 1px; color: grey;" />
+                            <section id="palm_txt">
+                                <h4><code>palm.txt</code><br>
+                                    <a href="https://github.com/lygitdata/PaLMr/blob/main/R/palm.txt.R" target="_blank"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIxLjkiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMjE5IDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSIgOiBPcGVuIGluIEdpdEh1YiI+CiAgPHRpdGxlPiA6IE9wZW4gaW4gR2l0SHViPC90aXRsZT4KICA8bGluZWFyR3JhZGllbnQgaWQ9IkZXQ2RkIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii4xIiBzdG9wLWNvbG9yPSIjRUVFIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxtYXNrIGlkPSJmbUxpZSI+PHJlY3Qgd2lkdGg9IjEyMTkiIGhlaWdodD0iMjAwIiByeD0iMzAiIGZpbGw9IiNGRkYiLz48L21hc2s+CiAgPGcgbWFzaz0idXJsKCNmbUxpZSkiPgogICAgPHJlY3Qgd2lkdGg9IjI2OSIgaGVpZ2h0PSIyMDAiIGZpbGw9IiM1NTUiLz4KICAgIDxyZWN0IHdpZHRoPSI5NTAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDhDIiB4PSIyNjkiLz4KICAgIDxyZWN0IHdpZHRoPSIxMjE5IiBoZWlnaHQ9IjIwMCIgZmlsbD0idXJsKCNGV0NkZCkiLz4KICA8L2c+CiAgPGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9IlZlcmRhbmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPgogICAgPHRleHQgeD0iMTkwIiB5PSIxNDgiIHRleHRMZW5ndGg9IjM5IiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIwLjI1Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMTgwIiB5PSIxMzgiIHRleHRMZW5ndGg9IjM5Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMzI0IiB5PSIxNDgiIHRleHRMZW5ndGg9Ijg1MCIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iMC4yNSI+T3BlbiBpbiBHaXRIdWI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMTQiIHk9IjEzOCIgdGV4dExlbmd0aD0iODUwIj5PcGVuIGluIEdpdEh1YjwvdGV4dD4KICA8L2c+CiAgPGltYWdlIHg9IjQwIiB5PSIzNSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMzAiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0EwT1RZZ05URXlJajQ4Y0dGMGFDQm1hV3hzUFNJalptWm1JaUJrUFNKTk1UWTFMamtnTXprM0xqUmpNQ0F5TFRJdU15QXpMall0TlM0eUlETXVOaTB6TGpNdU15MDFMall0TVM0ekxUVXVOaTB6TGpZZ01DMHlJREl1TXkwekxqWWdOUzR5TFRNdU5pQXpMUzR6SURVdU5pQXhMak1nTlM0MklETXVObnB0TFRNeExqRXROQzQxWXkwdU55QXlJREV1TXlBMExqTWdOQzR6SURRdU9TQXlMallnTVNBMUxqWWdNQ0EyTGpJdE1uTXRNUzR6TFRRdU15MDBMak10TlM0eVl5MHlMall0TGpjdE5TNDFMak10Tmk0eUlESXVNM3B0TkRRdU1pMHhMamRqTFRJdU9TNDNMVFF1T1NBeUxqWXROQzQySURRdU9TNHpJRElnTWk0NUlETXVNeUExTGprZ01pNDJJREl1T1MwdU55QTBMamt0TWk0MklEUXVOaTAwTGpZdExqTXRNUzQ1TFRNdE15NHlMVFV1T1MweUxqbDZUVEkwTkM0NElEaERNVEEyTGpFZ09DQXdJREV4TXk0eklEQWdNalV5WXpBZ01URXdMamtnTmprdU9DQXlNRFV1T0NBeE5qa3VOU0F5TXprdU1pQXhNaTQ0SURJdU15QXhOeTR6TFRVdU5pQXhOeTR6TFRFeUxqRWdNQzAyTGpJdExqTXROREF1TkMwdU15MDJNUzQwSURBZ01DMDNNQ0F4TlMwNE5DNDNMVEk1TGpnZ01DQXdMVEV4TGpRdE1qa3VNUzB5Tnk0NExUTTJMallnTUNBd0xUSXlMamt0TVRVdU55QXhMall0TVRVdU5DQXdJREFnTWpRdU9TQXlJRE00TGpZZ01qVXVPQ0F5TVM0NUlETTRMallnTlRndU5pQXlOeTQxSURjeUxqa2dNakF1T1NBeUxqTXRNVFlnT0M0NExUSTNMakVnTVRZdE16TXVOeTAxTlM0NUxUWXVNaTB4TVRJdU15MHhOQzR6TFRFeE1pNHpMVEV4TUM0MUlEQXRNamN1TlNBM0xqWXROREV1TXlBeU15NDJMVFU0TGprdE1pNDJMVFl1TlMweE1TNHhMVE16TGpNZ01pNDJMVFkzTGprZ01qQXVPUzAyTGpVZ05qa2dNamNnTmprZ01qY2dNakF0TlM0MklEUXhMalV0T0M0MUlEWXlMamd0T0M0MWN6UXlMamdnTWk0NUlEWXlMamdnT0M0MVl6QWdNQ0EwT0M0eExUTXpMallnTmprdE1qY2dNVE11TnlBek5DNDNJRFV1TWlBMk1TNDBJREl1TmlBMk55NDVJREUySURFM0xqY2dNalV1T0NBek1TNDFJREkxTGpnZ05UZ3VPU0F3SURrMkxqVXROVGd1T1NBeE1EUXVNaTB4TVRRdU9DQXhNVEF1TlNBNUxqSWdOeTQ1SURFM0lESXlMamtnTVRjZ05EWXVOQ0F3SURNekxqY3RMak1nTnpVdU5DMHVNeUE0TXk0MklEQWdOaTQxSURRdU5pQXhOQzQwSURFM0xqTWdNVEl1TVVNME1qZ3VNaUEwTlRjdU9DQTBPVFlnTXpZeUxqa2dORGsySURJMU1pQTBPVFlnTVRFekxqTWdNemd6TGpVZ09DQXlORFF1T0NBNGVrMDVOeTR5SURNMU1pNDVZeTB4TGpNZ01TMHhJRE11TXk0M0lEVXVNaUF4TGpZZ01TNDJJRE11T1NBeUxqTWdOUzR5SURFZ01TNHpMVEVnTVMwekxqTXRMamN0TlM0eUxURXVOaTB4TGpZdE15NDVMVEl1TXkwMUxqSXRNWHB0TFRFd0xqZ3RPQzR4WXkwdU55QXhMak11TXlBeUxqa2dNaTR6SURNdU9TQXhMallnTVNBekxqWXVOeUEwTGpNdExqY3VOeTB4TGpNdExqTXRNaTQ1TFRJdU15MHpMamt0TWkwdU5pMHpMall0TGpNdE5DNHpMamQ2YlRNeUxqUWdNelV1Tm1NdE1TNDJJREV1TXkweElEUXVNeUF4TGpNZ05pNHlJREl1TXlBeUxqTWdOUzR5SURJdU5pQTJMalVnTVNBeExqTXRNUzR6TGpjdE5DNHpMVEV1TXkwMkxqSXRNaTR5TFRJdU15MDFMakl0TWk0MkxUWXVOUzB4ZW0wdE1URXVOQzB4TkM0M1l5MHhMallnTVMweExqWWdNeTQySURBZ05TNDVJREV1TmlBeUxqTWdOQzR6SURNdU15QTFMallnTWk0eklERXVOaTB4TGpNZ01TNDJMVE11T1NBd0xUWXVNaTB4TGpRdE1pNHpMVFF0TXk0ekxUVXVOaTB5ZWlJdlBqd3ZjM1puUGdvPSIvPgo8L3N2Zz4=" alt="Open in GitHub"></a>
+                                </h4>
+                                <h4>Generate text using the Google PaLM 2 text model based on a prompt<h4>
+                                <h5>Usage</h5>
+                                <pre><code class="language-r">palm.txt(model.parameter,
+         prompt,
+         temperature = 0.7,
+         maxOutputTokens = 1024,
+         topP = 0.95,
+         topK = 40,
+         htUnspecified = "meda",
+         htDerogatory = "meda",
+         htToxicity = "meda",
+         htViolence = "meda",
+         htSexual = "meda",
+         htMedical = "meda",
+         htDangerous = "meda")</code></pre>
+                                <h5>Arguments</h5>
+                                <ul>
+                                  <li><code>model.parameter</code>: A character vector containing the API key, model version, and proxy status. Model version and type
+                                    are specified by Google. See function <code><a href="#palm_connect">palm.connect</a></code> for detail.</li>
+
+                                  <li><code>prompt</code>: A character string representing the query or prompt for text generation. The length of the query should
+                                    be between 1 and 8196 characters, inclusive.</li>
+
+                                  <li><code>temperature</code>: A numeric value between 0.0 and 1.0, inclusive (default: 0.7). Controls the randomness of the generated text.
+                                    A higher value (e.g., 0.9) results in more creative responses, while a lower value (e.g., 0.3) produces more straightforward text.</li>
+
+                                  <li><code>maxOutputTokens</code>: An integer value (default: 1024). Specifies the maximum number of tokens to include in the generated text.</li>
+
+                                  <li><code>topP</code>: A numeric value (default: 0.95). Defines the maximum cumulative probability of tokens considered when sampling. It controls the diversity of the text generated.</li>
+
+                                  <li><code>topK</code>: An integer value (default: 40). Sets the maximum number of tokens to consider when sampling.</li>
+
+                                  <li><code>htUnspecified</code>: Safety setting threshold for unspecified harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDerogatory</code>: Safety setting threshold for derogatory harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htToxicity</code>: Safety setting threshold for toxicity harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htViolence</code>: Safety setting threshold for violence harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htSexual</code>: Safety setting threshold for sexual harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htMedical</code>: Safety setting threshold for medical harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDangerous</code>: Safety setting threshold for dangerous harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                <h5>Value</h5>
+                                <p>
+                                    A character string generated by the Google PaLM 2 API based on the provided prompt and parameters.
+                                </p>
+                                <h5>Description</h5>
+                                <p>
+                                  This function sends a prompt to the Google PaLM 2 text model and generates text as a response. It allows customization of the generated text using various parameters.
+                                </p>
+                                <h5>Detail</h5>
+                                <p>
+                                    This function interacts with the Google PaLM model by sending a query using the specified parameters. It allows you to customize the generated text by adjusting the temperature, maxOutputTokens, topP, topK, and safety settings.
+                                </p>
+                                <p>
+                                    If the function is successful, it returns a character string containing the generated text. If an error occurs during the API request, it will stop execution and provide an error message.
+                                </p>
+                                <p>
+                                    The <code>model.parameter</code> argument should be a character vector with the API key, model version, and model type provided by Google. You can obtain this information by following the instructions provided by Google for using the PaLM API.
+                                </p>
+                                <p>
+                                    The safety settings control the content's safety level based on different harm categories. Harm thresholds are specified as per Google's guidelines and can be customized to control the content generated.
+                                </p>
+                                <div class="accordion" id="accordionDefault">
+                                  <div class="card">
+                                    <div class="card-header" id="palm_txt_ex">
+                                      <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#palm_txt_ex_collapse" aria-expanded="true">Example</a> </h5>
+                                    </div>
+                                    <div id="palm_txt_ex_collapse" class="collapse" data-parent="#accordionDefault">
+                                      <div class="card-body">
+                                        <a target="_blank" href="https://colab.research.google.com/github/lygitdata/PaLMr/blob/gh-pages/example/palmr_examples.ipynb">
+                                          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE3IiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMTciIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoMzB2MjBIMHoiLz48cGF0aCBmaWxsPSIjMDA3ZWM2IiBkPSJNMzAgMGg4N3YyMEgzMHoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDExN3YyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPjxzdmcgeD0iNHB4IiB5PSIwcHgiIHdpZHRoPSIyMnB4IiBoZWlnaHQ9IjIwcHgiIHZpZXdCb3g9Ii0yIDAgMjggMjQiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO2JvcmRlci1yYWRpdXM6IDFweDsiPjxwYXRoIHN0eWxlPSJmaWxsOiNlODcxMGE7IiBkPSJNMS45NzcsMTYuNzdjLTIuNjY3LTIuMjc3LTIuNjA1LTcuMDc5LDAtOS4zNTdDMi45MTksOC4wNTcsMy41MjIsOS4wNzUsNC40OSw5LjY5MWMtMS4xNTIsMS42LTEuMTQ2LDMuMjAxLTAuMDA0LDQuODAzQzMuNTIyLDE1LjExMSwyLjkxOCwxNi4xMjYsMS45NzcsMTYuNzd6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2Y5YWIwMDsiIGQ9Ik0xMi4yNTcsMTcuMTE0Yy0xLjc2Ny0xLjYzMy0yLjQ4NS0zLjY1OC0yLjExOC02LjAyYzAuNDUxLTIuOTEsMi4xMzktNC44OTMsNC45NDYtNS42NzhjMi41NjUtMC43MTgsNC45NjQtMC4yMTcsNi44NzgsMS44MTljLTAuODg0LDAuNzQzLTEuNzA3LDEuNTQ3LTIuNDM0LDIuNDQ2QzE4LjQ4OCw4LjgyNywxNy4zMTksOC40MzUsMTYsOC44NTZjLTIuNDA0LDAuNzY3LTMuMDQ2LDMuMjQxLTEuNDk0LDUuNjQ0Yy0wLjI0MSwwLjI3NS0wLjQ5MywwLjU0MS0wLjcyMSwwLjgyNkMxMy4yOTUsMTUuOTM5LDEyLjUxMSwxNi4zLDEyLjI1NywxNy4xMTR6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2U4NzEwYTsiIGQ9Ik0xOS41MjksOS42ODJjMC43MjctMC44OTksMS41NS0xLjcwMywyLjQzNC0yLjQ0NmMyLjcwMywyLjc4MywyLjcwMSw3LjAzMS0wLjAwNSw5Ljc2NGMtMi42NDgsMi42NzQtNi45MzYsMi43MjUtOS43MDEsMC4xMTVjMC4yNTQtMC44MTQsMS4wMzgtMS4xNzUsMS41MjgtMS43ODhjMC4yMjgtMC4yODUsMC40OC0wLjU1MiwwLjcyMS0wLjgyNmMxLjA1MywwLjkxNiwyLjI1NCwxLjI2OCwzLjYsMC44M0MyMC41MDIsMTQuNTUxLDIxLjE1MSwxMS45MjcsMTkuNTI5LDkuNjgyeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNNC40OSw5LjY5MUMzLjUyMiw5LjA3NSwyLjkxOSw4LjA1NywxLjk3Nyw3LjQxM2MyLjIwOS0yLjM5OCw1LjcyMS0yLjk0Miw4LjQ3Ni0xLjM1NWMwLjU1NSwwLjMyLDAuNzE5LDAuNjA2LDAuMjg1LDEuMTI4Yy0wLjE1NywwLjE4OC0wLjI1OCwwLjQyMi0wLjM5MSwwLjYzMWMtMC4yOTksMC40Ny0wLjUwOSwxLjA2Ny0wLjkyOSwxLjM3MUM4LjkzMyw5LjUzOSw4LjUyMyw4Ljg0Nyw4LjAyMSw4Ljc0NkM2LjY3Myw4LjQ3NSw1LjUwOSw4Ljc4Nyw0LjQ5LDkuNjkxeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNMS45NzcsMTYuNzdjMC45NDEtMC42NDQsMS41NDUtMS42NTksMi41MDktMi4yNzdjMS4zNzMsMS4xNTIsMi44NSwxLjQzMyw0LjQ1LDAuNDk5YzAuMzMyLTAuMTk0LDAuNTAzLTAuMDg4LDAuNjczLDAuMTljMC4zODYsMC42MzUsMC43NTMsMS4yODUsMS4xODEsMS44OWMwLjM0LDAuNDgsMC4yMjIsMC43MTUtMC4yNTMsMS4wMDZDNy44NCwxOS43Myw0LjIwNSwxOS4xODgsMS45NzcsMTYuNzd6Ii8+PC9zdmc+PHRleHQgeD0iMjQ1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB0ZXh0TGVuZ3RoPSIzMCI+IDwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE1MCIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48L2c+IDwvc3ZnPgo=" alt="Open In Colab"/>
+                                        </a>
+                                        <pre><code class="language-r">palm.model = palm.connect("v1beta3",
+                          "API_KEY",
+                          FALSE)
+palm.model
+
+prompt = "Write a story about a magic backpack."
+generated.text = palm.txt(palm.model,
+                          prompt)
+cat(generated.text)</code></pre>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <h5>See Also</h5>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/SafetySetting" target="_blank">Safety Setting - Google AI for Developers</a>
+                                </p>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/HarmCategory" target="_blank">HarmCategory - Google AI for Developers</a>
+                                </p>
+                            </section>
+
+                            <hr style="border-top: dotted 1px; color: grey;" />
+                            <section id="palm_txt_explain_code">
+                                <h4><code>palm.txt.explain.code</code><br>
+                                    <a href="https://github.com/lygitdata/PaLMr/blob/main/R/palm.txt.explain.code.R" target="_blank"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIxLjkiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMjE5IDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSIgOiBPcGVuIGluIEdpdEh1YiI+CiAgPHRpdGxlPiA6IE9wZW4gaW4gR2l0SHViPC90aXRsZT4KICA8bGluZWFyR3JhZGllbnQgaWQ9IkZXQ2RkIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii4xIiBzdG9wLWNvbG9yPSIjRUVFIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxtYXNrIGlkPSJmbUxpZSI+PHJlY3Qgd2lkdGg9IjEyMTkiIGhlaWdodD0iMjAwIiByeD0iMzAiIGZpbGw9IiNGRkYiLz48L21hc2s+CiAgPGcgbWFzaz0idXJsKCNmbUxpZSkiPgogICAgPHJlY3Qgd2lkdGg9IjI2OSIgaGVpZ2h0PSIyMDAiIGZpbGw9IiM1NTUiLz4KICAgIDxyZWN0IHdpZHRoPSI5NTAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDhDIiB4PSIyNjkiLz4KICAgIDxyZWN0IHdpZHRoPSIxMjE5IiBoZWlnaHQ9IjIwMCIgZmlsbD0idXJsKCNGV0NkZCkiLz4KICA8L2c+CiAgPGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9IlZlcmRhbmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPgogICAgPHRleHQgeD0iMTkwIiB5PSIxNDgiIHRleHRMZW5ndGg9IjM5IiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIwLjI1Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMTgwIiB5PSIxMzgiIHRleHRMZW5ndGg9IjM5Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMzI0IiB5PSIxNDgiIHRleHRMZW5ndGg9Ijg1MCIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iMC4yNSI+T3BlbiBpbiBHaXRIdWI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMTQiIHk9IjEzOCIgdGV4dExlbmd0aD0iODUwIj5PcGVuIGluIEdpdEh1YjwvdGV4dD4KICA8L2c+CiAgPGltYWdlIHg9IjQwIiB5PSIzNSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMzAiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0EwT1RZZ05URXlJajQ4Y0dGMGFDQm1hV3hzUFNJalptWm1JaUJrUFNKTk1UWTFMamtnTXprM0xqUmpNQ0F5TFRJdU15QXpMall0TlM0eUlETXVOaTB6TGpNdU15MDFMall0TVM0ekxUVXVOaTB6TGpZZ01DMHlJREl1TXkwekxqWWdOUzR5TFRNdU5pQXpMUzR6SURVdU5pQXhMak1nTlM0MklETXVObnB0TFRNeExqRXROQzQxWXkwdU55QXlJREV1TXlBMExqTWdOQzR6SURRdU9TQXlMallnTVNBMUxqWWdNQ0EyTGpJdE1uTXRNUzR6TFRRdU15MDBMak10TlM0eVl5MHlMall0TGpjdE5TNDFMak10Tmk0eUlESXVNM3B0TkRRdU1pMHhMamRqTFRJdU9TNDNMVFF1T1NBeUxqWXROQzQySURRdU9TNHpJRElnTWk0NUlETXVNeUExTGprZ01pNDJJREl1T1MwdU55QTBMamt0TWk0MklEUXVOaTAwTGpZdExqTXRNUzQ1TFRNdE15NHlMVFV1T1MweUxqbDZUVEkwTkM0NElEaERNVEEyTGpFZ09DQXdJREV4TXk0eklEQWdNalV5WXpBZ01URXdMamtnTmprdU9DQXlNRFV1T0NBeE5qa3VOU0F5TXprdU1pQXhNaTQ0SURJdU15QXhOeTR6TFRVdU5pQXhOeTR6TFRFeUxqRWdNQzAyTGpJdExqTXROREF1TkMwdU15MDJNUzQwSURBZ01DMDNNQ0F4TlMwNE5DNDNMVEk1TGpnZ01DQXdMVEV4TGpRdE1qa3VNUzB5Tnk0NExUTTJMallnTUNBd0xUSXlMamt0TVRVdU55QXhMall0TVRVdU5DQXdJREFnTWpRdU9TQXlJRE00TGpZZ01qVXVPQ0F5TVM0NUlETTRMallnTlRndU5pQXlOeTQxSURjeUxqa2dNakF1T1NBeUxqTXRNVFlnT0M0NExUSTNMakVnTVRZdE16TXVOeTAxTlM0NUxUWXVNaTB4TVRJdU15MHhOQzR6TFRFeE1pNHpMVEV4TUM0MUlEQXRNamN1TlNBM0xqWXROREV1TXlBeU15NDJMVFU0TGprdE1pNDJMVFl1TlMweE1TNHhMVE16TGpNZ01pNDJMVFkzTGprZ01qQXVPUzAyTGpVZ05qa2dNamNnTmprZ01qY2dNakF0TlM0MklEUXhMalV0T0M0MUlEWXlMamd0T0M0MWN6UXlMamdnTWk0NUlEWXlMamdnT0M0MVl6QWdNQ0EwT0M0eExUTXpMallnTmprdE1qY2dNVE11TnlBek5DNDNJRFV1TWlBMk1TNDBJREl1TmlBMk55NDVJREUySURFM0xqY2dNalV1T0NBek1TNDFJREkxTGpnZ05UZ3VPU0F3SURrMkxqVXROVGd1T1NBeE1EUXVNaTB4TVRRdU9DQXhNVEF1TlNBNUxqSWdOeTQ1SURFM0lESXlMamtnTVRjZ05EWXVOQ0F3SURNekxqY3RMak1nTnpVdU5DMHVNeUE0TXk0MklEQWdOaTQxSURRdU5pQXhOQzQwSURFM0xqTWdNVEl1TVVNME1qZ3VNaUEwTlRjdU9DQTBPVFlnTXpZeUxqa2dORGsySURJMU1pQTBPVFlnTVRFekxqTWdNemd6TGpVZ09DQXlORFF1T0NBNGVrMDVOeTR5SURNMU1pNDVZeTB4TGpNZ01TMHhJRE11TXk0M0lEVXVNaUF4TGpZZ01TNDJJRE11T1NBeUxqTWdOUzR5SURFZ01TNHpMVEVnTVMwekxqTXRMamN0TlM0eUxURXVOaTB4TGpZdE15NDVMVEl1TXkwMUxqSXRNWHB0TFRFd0xqZ3RPQzR4WXkwdU55QXhMak11TXlBeUxqa2dNaTR6SURNdU9TQXhMallnTVNBekxqWXVOeUEwTGpNdExqY3VOeTB4TGpNdExqTXRNaTQ1TFRJdU15MHpMamt0TWkwdU5pMHpMall0TGpNdE5DNHpMamQ2YlRNeUxqUWdNelV1Tm1NdE1TNDJJREV1TXkweElEUXVNeUF4TGpNZ05pNHlJREl1TXlBeUxqTWdOUzR5SURJdU5pQTJMalVnTVNBeExqTXRNUzR6TGpjdE5DNHpMVEV1TXkwMkxqSXRNaTR5TFRJdU15MDFMakl0TWk0MkxUWXVOUzB4ZW0wdE1URXVOQzB4TkM0M1l5MHhMallnTVMweExqWWdNeTQySURBZ05TNDVJREV1TmlBeUxqTWdOQzR6SURNdU15QTFMallnTWk0eklERXVOaTB4TGpNZ01TNDJMVE11T1NBd0xUWXVNaTB4TGpRdE1pNHpMVFF0TXk0ekxUVXVOaTB5ZWlJdlBqd3ZjM1puUGdvPSIvPgo8L3N2Zz4=" alt="Open in GitHub"></a>
+                                </h4>
+                                <h4>Explain code based on a query using the Google PaLM 2 text model<h4>
+                                <h5>Usage</h5>
+                                <pre><code class="language-r">palm.txt.explain.code(model.parameter,
+                      prompt,
+                      language = "R",
+                      temperature = 0.7,
+                      maxOutputTokens = 1024,
+                      topP = 0.95,
+                      topK = 40,
+                      htUnspecified = "meda",
+                      htDerogatory = "meda",
+                      htToxicity = "meda",
+                      htViolence = "meda",
+                      htSexual = "meda",
+                      htMedical = "meda",
+                      htDangerous = "meda")</code></pre>
+                                <h5>Arguments</h5>
+                                <ul>
+                                  <li><code>model.parameter</code>: A character vector containing the API key, model version, and proxy status. Model version and type
+                                    are specified by Google. See function <code><a href="#palm_connect">palm.connect</a></code> for detail.</li>
+
+                                  <li><code>prompt</code>: A character string representing the query or prompt for text generation. The length of the query should
+                                    be between 1 and 8196 characters, inclusive.</li>
+
+                                  <li><code>language</code>: A character string specifying the programming language used in the code (default: "R").</li>
+
+                                  <li><code>temperature</code>: A numeric value between 0.0 and 1.0, inclusive (default: 0.7). Controls the randomness of the generated text.
+                                    A higher value (e.g., 0.9) results in more creative responses, while a lower value (e.g., 0.3) produces more straightforward text.</li>
+
+                                  <li><code>maxOutputTokens</code>: An integer value (default: 1024). Specifies the maximum number of tokens to include in the generated text.</li>
+
+                                  <li><code>topP</code>: A numeric value (default: 0.95). Defines the maximum cumulative probability of tokens considered when sampling. It controls the diversity of the text generated.</li>
+
+                                  <li><code>topK</code>: An integer value (default: 40). Sets the maximum number of tokens to consider when sampling.</li>
+
+                                  <li><code>htUnspecified</code>: Safety setting threshold for unspecified harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDerogatory</code>: Safety setting threshold for derogatory harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htToxicity</code>: Safety setting threshold for toxicity harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htViolence</code>: Safety setting threshold for violence harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htSexual</code>: Safety setting threshold for sexual harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htMedical</code>: Safety setting threshold for medical harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDangerous</code>: Safety setting threshold for dangerous harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                <p>
+                                  A character string containing the detailed explanation of the provided code snippet based on the query and parameters.
+                                </p>
+                                <h5>Description</h5>
+                                <p>
+                                  This function sends a query with a code snippet to the Google PaLM 2 text model and generates a detailed explanation of the code. It supports various programming languages and allows you to customize the explanation.
+                                </p>
+                                <h5>Detail</h5>
+                                <p>
+                                    This function interacts with the Google PaLM model by sending a code query to explain code. It allows you to customize the generated code explanations by specifying the programming language, and additional parameters like temperature, token limits, and safety settings.
+                                </p>
+                                <p>
+                                    If the function is successful, it returns a detailed explanation of the provided code as a character string. If an error occurs during the API request, it will stop execution and provide an error message.
+                                </p>
+                                <p>
+                                    The <code>model.parameter</code> argument should be a character vector with the API key, model version, and model type provided by Google. You can obtain this information by following the instructions provided by Google for using the PaLM API.
+                                </p>
+                                <p>
+                                    The safety settings control the content's safety level based on different harm categories. Harm thresholds are specified as per Google's guidelines and can be customized to control the content generated.
+                                </p>
+                                <div class="accordion" id="accordionDefault">
+                                  <div class="card">
+                                    <div class="card-header" id="palm_txt_explain_code_ex">
+                                      <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#palm_txt_explain_code_ex_collapse" aria-expanded="true">Example</a> </h5>
+                                    </div>
+                                    <div id="palm_txt_explain_code_ex_collapse" class="collapse" data-parent="#accordionDefault">
+                                      <div class="card-body">
+                                        <a target="_blank" href="https://colab.research.google.com/github/lygitdata/PaLMr/blob/gh-pages/example/palmr_examples.ipynb">
+                                          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE3IiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMTciIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoMzB2MjBIMHoiLz48cGF0aCBmaWxsPSIjMDA3ZWM2IiBkPSJNMzAgMGg4N3YyMEgzMHoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDExN3YyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPjxzdmcgeD0iNHB4IiB5PSIwcHgiIHdpZHRoPSIyMnB4IiBoZWlnaHQ9IjIwcHgiIHZpZXdCb3g9Ii0yIDAgMjggMjQiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO2JvcmRlci1yYWRpdXM6IDFweDsiPjxwYXRoIHN0eWxlPSJmaWxsOiNlODcxMGE7IiBkPSJNMS45NzcsMTYuNzdjLTIuNjY3LTIuMjc3LTIuNjA1LTcuMDc5LDAtOS4zNTdDMi45MTksOC4wNTcsMy41MjIsOS4wNzUsNC40OSw5LjY5MWMtMS4xNTIsMS42LTEuMTQ2LDMuMjAxLTAuMDA0LDQuODAzQzMuNTIyLDE1LjExMSwyLjkxOCwxNi4xMjYsMS45NzcsMTYuNzd6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2Y5YWIwMDsiIGQ9Ik0xMi4yNTcsMTcuMTE0Yy0xLjc2Ny0xLjYzMy0yLjQ4NS0zLjY1OC0yLjExOC02LjAyYzAuNDUxLTIuOTEsMi4xMzktNC44OTMsNC45NDYtNS42NzhjMi41NjUtMC43MTgsNC45NjQtMC4yMTcsNi44NzgsMS44MTljLTAuODg0LDAuNzQzLTEuNzA3LDEuNTQ3LTIuNDM0LDIuNDQ2QzE4LjQ4OCw4LjgyNywxNy4zMTksOC40MzUsMTYsOC44NTZjLTIuNDA0LDAuNzY3LTMuMDQ2LDMuMjQxLTEuNDk0LDUuNjQ0Yy0wLjI0MSwwLjI3NS0wLjQ5MywwLjU0MS0wLjcyMSwwLjgyNkMxMy4yOTUsMTUuOTM5LDEyLjUxMSwxNi4zLDEyLjI1NywxNy4xMTR6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2U4NzEwYTsiIGQ9Ik0xOS41MjksOS42ODJjMC43MjctMC44OTksMS41NS0xLjcwMywyLjQzNC0yLjQ0NmMyLjcwMywyLjc4MywyLjcwMSw3LjAzMS0wLjAwNSw5Ljc2NGMtMi42NDgsMi42NzQtNi45MzYsMi43MjUtOS43MDEsMC4xMTVjMC4yNTQtMC44MTQsMS4wMzgtMS4xNzUsMS41MjgtMS43ODhjMC4yMjgtMC4yODUsMC40OC0wLjU1MiwwLjcyMS0wLjgyNmMxLjA1MywwLjkxNiwyLjI1NCwxLjI2OCwzLjYsMC44M0MyMC41MDIsMTQuNTUxLDIxLjE1MSwxMS45MjcsMTkuNTI5LDkuNjgyeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNNC40OSw5LjY5MUMzLjUyMiw5LjA3NSwyLjkxOSw4LjA1NywxLjk3Nyw3LjQxM2MyLjIwOS0yLjM5OCw1LjcyMS0yLjk0Miw4LjQ3Ni0xLjM1NWMwLjU1NSwwLjMyLDAuNzE5LDAuNjA2LDAuMjg1LDEuMTI4Yy0wLjE1NywwLjE4OC0wLjI1OCwwLjQyMi0wLjM5MSwwLjYzMWMtMC4yOTksMC40Ny0wLjUwOSwxLjA2Ny0wLjkyOSwxLjM3MUM4LjkzMyw5LjUzOSw4LjUyMyw4Ljg0Nyw4LjAyMSw4Ljc0NkM2LjY3Myw4LjQ3NSw1LjUwOSw4Ljc4Nyw0LjQ5LDkuNjkxeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNMS45NzcsMTYuNzdjMC45NDEtMC42NDQsMS41NDUtMS42NTksMi41MDktMi4yNzdjMS4zNzMsMS4xNTIsMi44NSwxLjQzMyw0LjQ1LDAuNDk5YzAuMzMyLTAuMTk0LDAuNTAzLTAuMDg4LDAuNjczLDAuMTljMC4zODYsMC42MzUsMC43NTMsMS4yODUsMS4xODEsMS44OWMwLjM0LDAuNDgsMC4yMjIsMC43MTUtMC4yNTMsMS4wMDZDNy44NCwxOS43Myw0LjIwNSwxOS4xODgsMS45NzcsMTYuNzd6Ii8+PC9zdmc+PHRleHQgeD0iMjQ1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB0ZXh0TGVuZ3RoPSIzMCI+IDwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE1MCIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48L2c+IDwvc3ZnPgo=" alt="Open In Colab"/>
+                                        </a>
+                                        <pre><code class="language-r">palm.model = palm.connect("v1beta3",
+                          "API_KEY",
+                          FALSE)
+palm.model
+
+prompt = "foo <- function(n) {
+            if (n <= 0) {
+              return(0)
+            } else if (n == 1) {
+              return(1)
+            } else {
+              return(foo(n - 1) + foo(n - 2))
+            }
+          }"
+code.explanation = palm.txt.explain.code(palm.model,
+                                         prompt)
+cat(code.explanation)</code></pre>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <h5>See Also</h5>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/SafetySetting" target="_blank">Safety Setting - Google AI for Developers</a>
+                                </p>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/HarmCategory" target="_blank">HarmCategory - Google AI for Developers</a>
+                                </p>
+                            </section>
+
+                            <hr style="border-top: dotted 1px; color: grey;" />
+                            <section id="palm_txt_fix_grammar">
+                                <h4><code>palm.txt.fix.grammar</code><br>
+                                    <a href="https://github.com/lygitdata/PaLMr/blob/main/R/palm.txt.fix.grammar.R" target="_blank"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIxLjkiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMjE5IDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSIgOiBPcGVuIGluIEdpdEh1YiI+CiAgPHRpdGxlPiA6IE9wZW4gaW4gR2l0SHViPC90aXRsZT4KICA8bGluZWFyR3JhZGllbnQgaWQ9IkZXQ2RkIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii4xIiBzdG9wLWNvbG9yPSIjRUVFIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxtYXNrIGlkPSJmbUxpZSI+PHJlY3Qgd2lkdGg9IjEyMTkiIGhlaWdodD0iMjAwIiByeD0iMzAiIGZpbGw9IiNGRkYiLz48L21hc2s+CiAgPGcgbWFzaz0idXJsKCNmbUxpZSkiPgogICAgPHJlY3Qgd2lkdGg9IjI2OSIgaGVpZ2h0PSIyMDAiIGZpbGw9IiM1NTUiLz4KICAgIDxyZWN0IHdpZHRoPSI5NTAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDhDIiB4PSIyNjkiLz4KICAgIDxyZWN0IHdpZHRoPSIxMjE5IiBoZWlnaHQ9IjIwMCIgZmlsbD0idXJsKCNGV0NkZCkiLz4KICA8L2c+CiAgPGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9IlZlcmRhbmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPgogICAgPHRleHQgeD0iMTkwIiB5PSIxNDgiIHRleHRMZW5ndGg9IjM5IiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIwLjI1Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMTgwIiB5PSIxMzgiIHRleHRMZW5ndGg9IjM5Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMzI0IiB5PSIxNDgiIHRleHRMZW5ndGg9Ijg1MCIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iMC4yNSI+T3BlbiBpbiBHaXRIdWI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMTQiIHk9IjEzOCIgdGV4dExlbmd0aD0iODUwIj5PcGVuIGluIEdpdEh1YjwvdGV4dD4KICA8L2c+CiAgPGltYWdlIHg9IjQwIiB5PSIzNSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMzAiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0EwT1RZZ05URXlJajQ4Y0dGMGFDQm1hV3hzUFNJalptWm1JaUJrUFNKTk1UWTFMamtnTXprM0xqUmpNQ0F5TFRJdU15QXpMall0TlM0eUlETXVOaTB6TGpNdU15MDFMall0TVM0ekxUVXVOaTB6TGpZZ01DMHlJREl1TXkwekxqWWdOUzR5TFRNdU5pQXpMUzR6SURVdU5pQXhMak1nTlM0MklETXVObnB0TFRNeExqRXROQzQxWXkwdU55QXlJREV1TXlBMExqTWdOQzR6SURRdU9TQXlMallnTVNBMUxqWWdNQ0EyTGpJdE1uTXRNUzR6TFRRdU15MDBMak10TlM0eVl5MHlMall0TGpjdE5TNDFMak10Tmk0eUlESXVNM3B0TkRRdU1pMHhMamRqTFRJdU9TNDNMVFF1T1NBeUxqWXROQzQySURRdU9TNHpJRElnTWk0NUlETXVNeUExTGprZ01pNDJJREl1T1MwdU55QTBMamt0TWk0MklEUXVOaTAwTGpZdExqTXRNUzQ1TFRNdE15NHlMVFV1T1MweUxqbDZUVEkwTkM0NElEaERNVEEyTGpFZ09DQXdJREV4TXk0eklEQWdNalV5WXpBZ01URXdMamtnTmprdU9DQXlNRFV1T0NBeE5qa3VOU0F5TXprdU1pQXhNaTQ0SURJdU15QXhOeTR6TFRVdU5pQXhOeTR6TFRFeUxqRWdNQzAyTGpJdExqTXROREF1TkMwdU15MDJNUzQwSURBZ01DMDNNQ0F4TlMwNE5DNDNMVEk1TGpnZ01DQXdMVEV4TGpRdE1qa3VNUzB5Tnk0NExUTTJMallnTUNBd0xUSXlMamt0TVRVdU55QXhMall0TVRVdU5DQXdJREFnTWpRdU9TQXlJRE00TGpZZ01qVXVPQ0F5TVM0NUlETTRMallnTlRndU5pQXlOeTQxSURjeUxqa2dNakF1T1NBeUxqTXRNVFlnT0M0NExUSTNMakVnTVRZdE16TXVOeTAxTlM0NUxUWXVNaTB4TVRJdU15MHhOQzR6TFRFeE1pNHpMVEV4TUM0MUlEQXRNamN1TlNBM0xqWXROREV1TXlBeU15NDJMVFU0TGprdE1pNDJMVFl1TlMweE1TNHhMVE16TGpNZ01pNDJMVFkzTGprZ01qQXVPUzAyTGpVZ05qa2dNamNnTmprZ01qY2dNakF0TlM0MklEUXhMalV0T0M0MUlEWXlMamd0T0M0MWN6UXlMamdnTWk0NUlEWXlMamdnT0M0MVl6QWdNQ0EwT0M0eExUTXpMallnTmprdE1qY2dNVE11TnlBek5DNDNJRFV1TWlBMk1TNDBJREl1TmlBMk55NDVJREUySURFM0xqY2dNalV1T0NBek1TNDFJREkxTGpnZ05UZ3VPU0F3SURrMkxqVXROVGd1T1NBeE1EUXVNaTB4TVRRdU9DQXhNVEF1TlNBNUxqSWdOeTQ1SURFM0lESXlMamtnTVRjZ05EWXVOQ0F3SURNekxqY3RMak1nTnpVdU5DMHVNeUE0TXk0MklEQWdOaTQxSURRdU5pQXhOQzQwSURFM0xqTWdNVEl1TVVNME1qZ3VNaUEwTlRjdU9DQTBPVFlnTXpZeUxqa2dORGsySURJMU1pQTBPVFlnTVRFekxqTWdNemd6TGpVZ09DQXlORFF1T0NBNGVrMDVOeTR5SURNMU1pNDVZeTB4TGpNZ01TMHhJRE11TXk0M0lEVXVNaUF4TGpZZ01TNDJJRE11T1NBeUxqTWdOUzR5SURFZ01TNHpMVEVnTVMwekxqTXRMamN0TlM0eUxURXVOaTB4TGpZdE15NDVMVEl1TXkwMUxqSXRNWHB0TFRFd0xqZ3RPQzR4WXkwdU55QXhMak11TXlBeUxqa2dNaTR6SURNdU9TQXhMallnTVNBekxqWXVOeUEwTGpNdExqY3VOeTB4TGpNdExqTXRNaTQ1TFRJdU15MHpMamt0TWkwdU5pMHpMall0TGpNdE5DNHpMamQ2YlRNeUxqUWdNelV1Tm1NdE1TNDJJREV1TXkweElEUXVNeUF4TGpNZ05pNHlJREl1TXlBeUxqTWdOUzR5SURJdU5pQTJMalVnTVNBeExqTXRNUzR6TGpjdE5DNHpMVEV1TXkwMkxqSXRNaTR5TFRJdU15MDFMakl0TWk0MkxUWXVOUzB4ZW0wdE1URXVOQzB4TkM0M1l5MHhMallnTVMweExqWWdNeTQySURBZ05TNDVJREV1TmlBeUxqTWdOQzR6SURNdU15QTFMallnTWk0eklERXVOaTB4TGpNZ01TNDJMVE11T1NBd0xUWXVNaTB4TGpRdE1pNHpMVFF0TXk0ekxUVXVOaTB5ZWlJdlBqd3ZjM1puUGdvPSIvPgo8L3N2Zz4=" alt="Open in GitHub"></a>
+                                </h4>
+                                <h4>Fix grammar and rewrite text using the Google PaLM 2 text model<h4>
+                                <h5>Usage</h5>
+                                <pre><code class="language-r">palm.txt.fix.grammar(model.parameter,
+                     prompt,
+                     temperature = 0.7,
+                     maxOutputTokens = 1024,
+                     topP = 0.95,
+                     topK = 40,
+                     htUnspecified = "meda",
+                     htDerogatory = "meda",
+                     htToxicity = "meda",
+                     htViolence = "meda",
+                     htSexual = "meda",
+                     htMedical = "meda",
+                     htDangerous = "meda")</code></pre>
+                                <h5>Arguments</h5>
+                                <ul>
+                                  <li><code>model.parameter</code>: A character vector containing the API key, model version, and proxy status. Model version and type
+                                    are specified by Google. See function <code><a href="#palm_connect">palm.connect</a></code> for detail.</li>
+
+                                  <li><code>prompt</code>: A character string representing the query or prompt for text generation. The length of the query should
+                                    be between 1 and 8196 characters, inclusive.</li>
+
+                                  <li><code>language</code>: A character string specifying the programming language used in the code (default: "R").</li>
+
+                                  <li><code>temperature</code>: A numeric value between 0.0 and 1.0, inclusive (default: 0.7). Controls the randomness of the generated text.
+                                    A higher value (e.g., 0.9) results in more creative responses, while a lower value (e.g., 0.3) produces more straightforward text.</li>
+
+                                  <li><code>maxOutputTokens</code>: An integer value (default: 1024). Specifies the maximum number of tokens to include in the generated text.</li>
+
+                                  <li><code>topP</code>: A numeric value (default: 0.95). Defines the maximum cumulative probability of tokens considered when sampling. It controls the diversity of the text generated.</li>
+
+                                  <li><code>topK</code>: An integer value (default: 40). Sets the maximum number of tokens to consider when sampling.</li>
+
+                                  <li><code>htUnspecified</code>: Safety setting threshold for unspecified harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDerogatory</code>: Safety setting threshold for derogatory harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htToxicity</code>: Safety setting threshold for toxicity harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htViolence</code>: Safety setting threshold for violence harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htSexual</code>: Safety setting threshold for sexual harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htMedical</code>: Safety setting threshold for medical harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDangerous</code>: Safety setting threshold for dangerous harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                <h5>Value</h5>
+                                <p>
+                                    A character string containing the rewritten text with corrected grammar, generated by the Google PaLM API based on the provided query and parameters.
+                                </p>
+                                <h5>Description</h5>
+                                <p>
+                                    This function sends a query with grammatical issues to the Google PaLM 2 text model and generates corrected text as a response. It allows customization of the generated text using various parameters.
+                                </p>
+                                <h5>Detail</h5>
+                                <p>
+                                    This function interacts with the Google PaLM model by sending a query with grammatical issues using the specified parameters. It allows you to customize the generated text by adjusting the temperature, maxOutputTokens, topP, topK, and safety settings.
+                                </p>
+                                <p>
+                                    If the function is successful, it returns a character string containing the rewritten text with corrected grammar. If an error occurs during the API request, it will stop execution and provide an error message.
+                                </p>
+                                <p>
+                                    The <code>model.parameter</code> argument should be a character vector with the API key, model version, and model type provided by Google. You can obtain this information by following the instructions provided by Google for using the PaLM API.
+                                </p>
+                                <p>
+                                    The safety settings control the content's safety level based on different harm categories. Harm thresholds are specified as per Google's guidelines and can be customized to control the content generated.
+                                </p>
+                                <div class="accordion" id="accordionDefault">
+                                  <div class="card">
+                                    <div class="card-header" id="palm_txt_fix_grammar_ex">
+                                      <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#palm_txt_fix_grammar_ex_collapse" aria-expanded="true">Example</a> </h5>
+                                    </div>
+                                    <div id="palm_txt_fix_grammar_ex_collapse" class="collapse" data-parent="#accordionDefault">
+                                      <div class="card-body">
+                                        <a target="_blank" href="https://colab.research.google.com/github/lygitdata/PaLMr/blob/gh-pages/example/palmr_examples.ipynb">
+                                          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE3IiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMTciIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoMzB2MjBIMHoiLz48cGF0aCBmaWxsPSIjMDA3ZWM2IiBkPSJNMzAgMGg4N3YyMEgzMHoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDExN3YyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPjxzdmcgeD0iNHB4IiB5PSIwcHgiIHdpZHRoPSIyMnB4IiBoZWlnaHQ9IjIwcHgiIHZpZXdCb3g9Ii0yIDAgMjggMjQiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO2JvcmRlci1yYWRpdXM6IDFweDsiPjxwYXRoIHN0eWxlPSJmaWxsOiNlODcxMGE7IiBkPSJNMS45NzcsMTYuNzdjLTIuNjY3LTIuMjc3LTIuNjA1LTcuMDc5LDAtOS4zNTdDMi45MTksOC4wNTcsMy41MjIsOS4wNzUsNC40OSw5LjY5MWMtMS4xNTIsMS42LTEuMTQ2LDMuMjAxLTAuMDA0LDQuODAzQzMuNTIyLDE1LjExMSwyLjkxOCwxNi4xMjYsMS45NzcsMTYuNzd6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2Y5YWIwMDsiIGQ9Ik0xMi4yNTcsMTcuMTE0Yy0xLjc2Ny0xLjYzMy0yLjQ4NS0zLjY1OC0yLjExOC02LjAyYzAuNDUxLTIuOTEsMi4xMzktNC44OTMsNC45NDYtNS42NzhjMi41NjUtMC43MTgsNC45NjQtMC4yMTcsNi44NzgsMS44MTljLTAuODg0LDAuNzQzLTEuNzA3LDEuNTQ3LTIuNDM0LDIuNDQ2QzE4LjQ4OCw4LjgyNywxNy4zMTksOC40MzUsMTYsOC44NTZjLTIuNDA0LDAuNzY3LTMuMDQ2LDMuMjQxLTEuNDk0LDUuNjQ0Yy0wLjI0MSwwLjI3NS0wLjQ5MywwLjU0MS0wLjcyMSwwLjgyNkMxMy4yOTUsMTUuOTM5LDEyLjUxMSwxNi4zLDEyLjI1NywxNy4xMTR6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2U4NzEwYTsiIGQ9Ik0xOS41MjksOS42ODJjMC43MjctMC44OTksMS41NS0xLjcwMywyLjQzNC0yLjQ0NmMyLjcwMywyLjc4MywyLjcwMSw3LjAzMS0wLjAwNSw5Ljc2NGMtMi42NDgsMi42NzQtNi45MzYsMi43MjUtOS43MDEsMC4xMTVjMC4yNTQtMC44MTQsMS4wMzgtMS4xNzUsMS41MjgtMS43ODhjMC4yMjgtMC4yODUsMC40OC0wLjU1MiwwLjcyMS0wLjgyNmMxLjA1MywwLjkxNiwyLjI1NCwxLjI2OCwzLjYsMC44M0MyMC41MDIsMTQuNTUxLDIxLjE1MSwxMS45MjcsMTkuNTI5LDkuNjgyeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNNC40OSw5LjY5MUMzLjUyMiw5LjA3NSwyLjkxOSw4LjA1NywxLjk3Nyw3LjQxM2MyLjIwOS0yLjM5OCw1LjcyMS0yLjk0Miw4LjQ3Ni0xLjM1NWMwLjU1NSwwLjMyLDAuNzE5LDAuNjA2LDAuMjg1LDEuMTI4Yy0wLjE1NywwLjE4OC0wLjI1OCwwLjQyMi0wLjM5MSwwLjYzMWMtMC4yOTksMC40Ny0wLjUwOSwxLjA2Ny0wLjkyOSwxLjM3MUM4LjkzMyw5LjUzOSw4LjUyMyw4Ljg0Nyw4LjAyMSw4Ljc0NkM2LjY3Myw4LjQ3NSw1LjUwOSw4Ljc4Nyw0LjQ5LDkuNjkxeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNMS45NzcsMTYuNzdjMC45NDEtMC42NDQsMS41NDUtMS42NTksMi41MDktMi4yNzdjMS4zNzMsMS4xNTIsMi44NSwxLjQzMyw0LjQ1LDAuNDk5YzAuMzMyLTAuMTk0LDAuNTAzLTAuMDg4LDAuNjczLDAuMTljMC4zODYsMC42MzUsMC43NTMsMS4yODUsMS4xODEsMS44OWMwLjM0LDAuNDgsMC4yMjIsMC43MTUtMC4yNTMsMS4wMDZDNy44NCwxOS43Myw0LjIwNSwxOS4xODgsMS45NzcsMTYuNzd6Ii8+PC9zdmc+PHRleHQgeD0iMjQ1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB0ZXh0TGVuZ3RoPSIzMCI+IDwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE1MCIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48L2c+IDwvc3ZnPgo=" alt="Open In Colab"/>
+                                        </a>
+                                        <pre><code class="language-r">palm.model = palm.connect("v1beta3",
+                          "API_KEY",
+                          FALSE)
+palm.model
+
+prompt = "Yesterday, I will buy a book for my younger sister as his birthday gift.
+          They were very happen when seeing this gift earlier today."
+correct.text = palm.txt.fix.grammar(palm.model,
+                                    prompt)
+cat(correct.text)</code></pre>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <h5>See Also</h5>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/SafetySetting" target="_blank">Safety Setting - Google AI for Developers</a>
+                                </p>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/HarmCategory" target="_blank">HarmCategory - Google AI for Developers</a>
+                                </p>
+                            </section>
+
+                            <hr style="border-top: dotted 1px; color: grey;" />
+                            <section id="palm_txt_get_reference">
+                                <h4><code>palm.txt.get.reference</code><br>
+                                    <a href="https://github.com/lygitdata/PaLMr/blob/main/R/palm.txt.get.reference.R" target="_blank"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIxLjkiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMjE5IDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSIgOiBPcGVuIGluIEdpdEh1YiI+CiAgPHRpdGxlPiA6IE9wZW4gaW4gR2l0SHViPC90aXRsZT4KICA8bGluZWFyR3JhZGllbnQgaWQ9IkZXQ2RkIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii4xIiBzdG9wLWNvbG9yPSIjRUVFIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxtYXNrIGlkPSJmbUxpZSI+PHJlY3Qgd2lkdGg9IjEyMTkiIGhlaWdodD0iMjAwIiByeD0iMzAiIGZpbGw9IiNGRkYiLz48L21hc2s+CiAgPGcgbWFzaz0idXJsKCNmbUxpZSkiPgogICAgPHJlY3Qgd2lkdGg9IjI2OSIgaGVpZ2h0PSIyMDAiIGZpbGw9IiM1NTUiLz4KICAgIDxyZWN0IHdpZHRoPSI5NTAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDhDIiB4PSIyNjkiLz4KICAgIDxyZWN0IHdpZHRoPSIxMjE5IiBoZWlnaHQ9IjIwMCIgZmlsbD0idXJsKCNGV0NkZCkiLz4KICA8L2c+CiAgPGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9IlZlcmRhbmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPgogICAgPHRleHQgeD0iMTkwIiB5PSIxNDgiIHRleHRMZW5ndGg9IjM5IiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIwLjI1Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMTgwIiB5PSIxMzgiIHRleHRMZW5ndGg9IjM5Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMzI0IiB5PSIxNDgiIHRleHRMZW5ndGg9Ijg1MCIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iMC4yNSI+T3BlbiBpbiBHaXRIdWI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMTQiIHk9IjEzOCIgdGV4dExlbmd0aD0iODUwIj5PcGVuIGluIEdpdEh1YjwvdGV4dD4KICA8L2c+CiAgPGltYWdlIHg9IjQwIiB5PSIzNSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMzAiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0EwT1RZZ05URXlJajQ4Y0dGMGFDQm1hV3hzUFNJalptWm1JaUJrUFNKTk1UWTFMamtnTXprM0xqUmpNQ0F5TFRJdU15QXpMall0TlM0eUlETXVOaTB6TGpNdU15MDFMall0TVM0ekxUVXVOaTB6TGpZZ01DMHlJREl1TXkwekxqWWdOUzR5TFRNdU5pQXpMUzR6SURVdU5pQXhMak1nTlM0MklETXVObnB0TFRNeExqRXROQzQxWXkwdU55QXlJREV1TXlBMExqTWdOQzR6SURRdU9TQXlMallnTVNBMUxqWWdNQ0EyTGpJdE1uTXRNUzR6TFRRdU15MDBMak10TlM0eVl5MHlMall0TGpjdE5TNDFMak10Tmk0eUlESXVNM3B0TkRRdU1pMHhMamRqTFRJdU9TNDNMVFF1T1NBeUxqWXROQzQySURRdU9TNHpJRElnTWk0NUlETXVNeUExTGprZ01pNDJJREl1T1MwdU55QTBMamt0TWk0MklEUXVOaTAwTGpZdExqTXRNUzQ1TFRNdE15NHlMVFV1T1MweUxqbDZUVEkwTkM0NElEaERNVEEyTGpFZ09DQXdJREV4TXk0eklEQWdNalV5WXpBZ01URXdMamtnTmprdU9DQXlNRFV1T0NBeE5qa3VOU0F5TXprdU1pQXhNaTQ0SURJdU15QXhOeTR6TFRVdU5pQXhOeTR6TFRFeUxqRWdNQzAyTGpJdExqTXROREF1TkMwdU15MDJNUzQwSURBZ01DMDNNQ0F4TlMwNE5DNDNMVEk1TGpnZ01DQXdMVEV4TGpRdE1qa3VNUzB5Tnk0NExUTTJMallnTUNBd0xUSXlMamt0TVRVdU55QXhMall0TVRVdU5DQXdJREFnTWpRdU9TQXlJRE00TGpZZ01qVXVPQ0F5TVM0NUlETTRMallnTlRndU5pQXlOeTQxSURjeUxqa2dNakF1T1NBeUxqTXRNVFlnT0M0NExUSTNMakVnTVRZdE16TXVOeTAxTlM0NUxUWXVNaTB4TVRJdU15MHhOQzR6TFRFeE1pNHpMVEV4TUM0MUlEQXRNamN1TlNBM0xqWXROREV1TXlBeU15NDJMVFU0TGprdE1pNDJMVFl1TlMweE1TNHhMVE16TGpNZ01pNDJMVFkzTGprZ01qQXVPUzAyTGpVZ05qa2dNamNnTmprZ01qY2dNakF0TlM0MklEUXhMalV0T0M0MUlEWXlMamd0T0M0MWN6UXlMamdnTWk0NUlEWXlMamdnT0M0MVl6QWdNQ0EwT0M0eExUTXpMallnTmprdE1qY2dNVE11TnlBek5DNDNJRFV1TWlBMk1TNDBJREl1TmlBMk55NDVJREUySURFM0xqY2dNalV1T0NBek1TNDFJREkxTGpnZ05UZ3VPU0F3SURrMkxqVXROVGd1T1NBeE1EUXVNaTB4TVRRdU9DQXhNVEF1TlNBNUxqSWdOeTQ1SURFM0lESXlMamtnTVRjZ05EWXVOQ0F3SURNekxqY3RMak1nTnpVdU5DMHVNeUE0TXk0MklEQWdOaTQxSURRdU5pQXhOQzQwSURFM0xqTWdNVEl1TVVNME1qZ3VNaUEwTlRjdU9DQTBPVFlnTXpZeUxqa2dORGsySURJMU1pQTBPVFlnTVRFekxqTWdNemd6TGpVZ09DQXlORFF1T0NBNGVrMDVOeTR5SURNMU1pNDVZeTB4TGpNZ01TMHhJRE11TXk0M0lEVXVNaUF4TGpZZ01TNDJJRE11T1NBeUxqTWdOUzR5SURFZ01TNHpMVEVnTVMwekxqTXRMamN0TlM0eUxURXVOaTB4TGpZdE15NDVMVEl1TXkwMUxqSXRNWHB0TFRFd0xqZ3RPQzR4WXkwdU55QXhMak11TXlBeUxqa2dNaTR6SURNdU9TQXhMallnTVNBekxqWXVOeUEwTGpNdExqY3VOeTB4TGpNdExqTXRNaTQ1TFRJdU15MHpMamt0TWkwdU5pMHpMall0TGpNdE5DNHpMamQ2YlRNeUxqUWdNelV1Tm1NdE1TNDJJREV1TXkweElEUXVNeUF4TGpNZ05pNHlJREl1TXlBeUxqTWdOUzR5SURJdU5pQTJMalVnTVNBeExqTXRNUzR6TGpjdE5DNHpMVEV1TXkwMkxqSXRNaTR5TFRJdU15MDFMakl0TWk0MkxUWXVOUzB4ZW0wdE1URXVOQzB4TkM0M1l5MHhMallnTVMweExqWWdNeTQySURBZ05TNDVJREV1TmlBeUxqTWdOQzR6SURNdU15QTFMallnTWk0eklERXVOaTB4TGpNZ01TNDJMVE11T1NBd0xUWXVNaTB4TGpRdE1pNHpMVFF0TXk0ekxUVXVOaTB5ZWlJdlBqd3ZjM1puUGdvPSIvPgo8L3N2Zz4=" alt="Open in GitHub"></a>
+                                </h4>
+                                <h4>Get references based on a query using the Google PaLM 2 text model<h4>
+                                <h5>Usage</h5>
+                                <pre><code class="language-r">palm.txt.get.reference(model.parameter,
+                       prompt,
+                       source.type = "articles",
+                       source.date = "most recent",
+                       n.source = 5,
+                       citation.style = "APA7",
+                       temperature = 0.7,
+                       maxOutputTokens = 1024,
+                       topP = 0.95,
+                       topK = 40,
+                       htUnspecified = "meda",
+                       htDerogatory = "meda",
+                       htToxicity = "meda",
+                       htViolence = "meda",
+                       htSexual = "meda",
+                       htMedical = "meda",
+                       htDangerous = "meda")</code></pre>
+                                <h5>Arguments</h5>
+                                <ul>
+                                  <li><code>model.parameter</code>: A character vector containing the API key, model version, and proxy status. Model version and type
+                                    are specified by Google. See function <code><a href="#palm_connect">palm.connect</a></code> for detail.</li>
+
+                                  <li><code>prompt</code>: A character string representing the query or prompt for text generation. The length of the query should
+                                    be between 1 and 8196 characters, inclusive.</li>
+
+                                  <li><code>source.type</code>: A character string specifying the type of sources to search for (default: "articles").</li>
+
+                                  <li><code>source.date</code>: A character string specifying the date range for the sources (default: "most recent").</li>
+
+                                  <li><code>n.source</code>: An integer value specifying the number of sources to retrieve (default: 5).</li>
+
+                                  <li><code>citation.style</code>: A character string specifying the citation style for the references (default: "APA7").</li>
+
+                                  <li><code>temperature</code>: A numeric value between 0.0 and 1.0, inclusive (default: 0.7). Controls the randomness of the generated text.
+                                    A higher value (e.g., 0.9) results in more creative responses, while a lower value (e.g., 0.3) produces more straightforward text.</li>
+
+                                  <li><code>maxOutputTokens</code>: An integer value (default: 1024). Specifies the maximum number of tokens to include in the generated text.</li>
+
+                                  <li><code>topP</code>: A numeric value (default: 0.95). Defines the maximum cumulative probability of tokens considered when sampling. It controls the diversity of the text generated.</li>
+
+                                  <li><code>topK</code>: An integer value (default: 40). Sets the maximum number of tokens to consider when sampling.</li>
+
+                                  <li><code>htUnspecified</code>: Safety setting threshold for unspecified harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDerogatory</code>: Safety setting threshold for derogatory harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htToxicity</code>: Safety setting threshold for toxicity harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htViolence</code>: Safety setting threshold for violence harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htSexual</code>: Safety setting threshold for sexual harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htMedical</code>: Safety setting threshold for medical harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDangerous</code>: Safety setting threshold for dangerous harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                <h5>Value</h5>
+                                <p>
+                                    A character string containing the generated references based on the provided query and parameters.
+                                </p>
+                                <h5>Description</h5>
+                                <p>
+                                    This function sends a query to the Google PaLM 2 text model and generates a list of references based on the query. It allows customization of the generated references and supports various citation styles and source types.
+                                </p>
+                                <h5>Detail</h5>
+                                <p>
+                                    This function interacts with the Google PaLM model by sending a query to find references. It allows you to customize the generated references by specifying the number of sources, citation style, source type, date range, and safety settings.
+                                </p>
+                                <p>
+                                    If the function is successful, it returns a character vector containing the generated references. If an error occurs during the API request, it will stop execution and provide an error message.
+                                </p>
+                                <p>
+                                    The <code>model.parameter</code> argument should be a character vector with the API key, model version, and model type provided by Google. You can obtain this information by following the instructions provided by Google for using the PaLM API.
+                                </p>
+                                <p>
+                                    The safety settings control the content's safety level based on different harm categories. Harm thresholds are specified as per Google's guidelines and can be customized to control the content generated.
+                                </p>
+                                <div class="accordion" id="accordionDefault">
+                                  <div class="card">
+                                    <div class="card-header" id="palm_txt_get_reference_ex">
+                                      <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#palm_txt_get_reference_ex_collapse" aria-expanded="true">Example</a> </h5>
+                                    </div>
+                                    <div id="palm_txt_get_reference_ex_collapse" class="collapse" data-parent="#accordionDefault">
+                                      <div class="card-body">
+                                        <a target="_blank" href="https://colab.research.google.com/github/lygitdata/PaLMr/blob/gh-pages/example/palmr_examples.ipynb">
+                                          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE3IiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMTciIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoMzB2MjBIMHoiLz48cGF0aCBmaWxsPSIjMDA3ZWM2IiBkPSJNMzAgMGg4N3YyMEgzMHoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDExN3YyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPjxzdmcgeD0iNHB4IiB5PSIwcHgiIHdpZHRoPSIyMnB4IiBoZWlnaHQ9IjIwcHgiIHZpZXdCb3g9Ii0yIDAgMjggMjQiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO2JvcmRlci1yYWRpdXM6IDFweDsiPjxwYXRoIHN0eWxlPSJmaWxsOiNlODcxMGE7IiBkPSJNMS45NzcsMTYuNzdjLTIuNjY3LTIuMjc3LTIuNjA1LTcuMDc5LDAtOS4zNTdDMi45MTksOC4wNTcsMy41MjIsOS4wNzUsNC40OSw5LjY5MWMtMS4xNTIsMS42LTEuMTQ2LDMuMjAxLTAuMDA0LDQuODAzQzMuNTIyLDE1LjExMSwyLjkxOCwxNi4xMjYsMS45NzcsMTYuNzd6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2Y5YWIwMDsiIGQ9Ik0xMi4yNTcsMTcuMTE0Yy0xLjc2Ny0xLjYzMy0yLjQ4NS0zLjY1OC0yLjExOC02LjAyYzAuNDUxLTIuOTEsMi4xMzktNC44OTMsNC45NDYtNS42NzhjMi41NjUtMC43MTgsNC45NjQtMC4yMTcsNi44NzgsMS44MTljLTAuODg0LDAuNzQzLTEuNzA3LDEuNTQ3LTIuNDM0LDIuNDQ2QzE4LjQ4OCw4LjgyNywxNy4zMTksOC40MzUsMTYsOC44NTZjLTIuNDA0LDAuNzY3LTMuMDQ2LDMuMjQxLTEuNDk0LDUuNjQ0Yy0wLjI0MSwwLjI3NS0wLjQ5MywwLjU0MS0wLjcyMSwwLjgyNkMxMy4yOTUsMTUuOTM5LDEyLjUxMSwxNi4zLDEyLjI1NywxNy4xMTR6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2U4NzEwYTsiIGQ9Ik0xOS41MjksOS42ODJjMC43MjctMC44OTksMS41NS0xLjcwMywyLjQzNC0yLjQ0NmMyLjcwMywyLjc4MywyLjcwMSw3LjAzMS0wLjAwNSw5Ljc2NGMtMi42NDgsMi42NzQtNi45MzYsMi43MjUtOS43MDEsMC4xMTVjMC4yNTQtMC44MTQsMS4wMzgtMS4xNzUsMS41MjgtMS43ODhjMC4yMjgtMC4yODUsMC40OC0wLjU1MiwwLjcyMS0wLjgyNmMxLjA1MywwLjkxNiwyLjI1NCwxLjI2OCwzLjYsMC44M0MyMC41MDIsMTQuNTUxLDIxLjE1MSwxMS45MjcsMTkuNTI5LDkuNjgyeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNNC40OSw5LjY5MUMzLjUyMiw5LjA3NSwyLjkxOSw4LjA1NywxLjk3Nyw3LjQxM2MyLjIwOS0yLjM5OCw1LjcyMS0yLjk0Miw4LjQ3Ni0xLjM1NWMwLjU1NSwwLjMyLDAuNzE5LDAuNjA2LDAuMjg1LDEuMTI4Yy0wLjE1NywwLjE4OC0wLjI1OCwwLjQyMi0wLjM5MSwwLjYzMWMtMC4yOTksMC40Ny0wLjUwOSwxLjA2Ny0wLjkyOSwxLjM3MUM4LjkzMyw5LjUzOSw4LjUyMyw4Ljg0Nyw4LjAyMSw4Ljc0NkM2LjY3Myw4LjQ3NSw1LjUwOSw4Ljc4Nyw0LjQ5LDkuNjkxeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNMS45NzcsMTYuNzdjMC45NDEtMC42NDQsMS41NDUtMS42NTksMi41MDktMi4yNzdjMS4zNzMsMS4xNTIsMi44NSwxLjQzMyw0LjQ1LDAuNDk5YzAuMzMyLTAuMTk0LDAuNTAzLTAuMDg4LDAuNjczLDAuMTljMC4zODYsMC42MzUsMC43NTMsMS4yODUsMS4xODEsMS44OWMwLjM0LDAuNDgsMC4yMjIsMC43MTUtMC4yNTMsMS4wMDZDNy44NCwxOS43Myw0LjIwNSwxOS4xODgsMS45NzcsMTYuNzd6Ii8+PC9zdmc+PHRleHQgeD0iMjQ1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB0ZXh0TGVuZ3RoPSIzMCI+IDwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE1MCIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48L2c+IDwvc3ZnPgo=" alt="Open In Colab"/>
+                                        </a>
+                                        <pre><code class="language-r">palm.model = palm.connect("v1beta3",
+                          "API_KEY",
+                          FALSE)
+palm.model
+
+correct.text = palm.txt.get.reference(palm.model,
+                                      "H5N1 in the United States")
+cat(correct.text)</code></pre>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <h5>See Also</h5>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/SafetySetting" target="_blank">Safety Setting - Google AI for Developers</a>
+                                </p>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/HarmCategory" target="_blank">HarmCategory - Google AI for Developers</a>
+                                </p>
+                            </section>
+
+                            <hr style="border-top: dotted 1px; color: grey;" />
+                            <section id="palm_txt_optimize_code">
+                                <h4><code>palm.txt.optimize.code</code><br>
+                                    <a href="https://github.com/lygitdata/PaLMr/blob/main/R/palm.txt.optimize.code.R" target="_blank"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIxLjkiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMjE5IDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSIgOiBPcGVuIGluIEdpdEh1YiI+CiAgPHRpdGxlPiA6IE9wZW4gaW4gR2l0SHViPC90aXRsZT4KICA8bGluZWFyR3JhZGllbnQgaWQ9IkZXQ2RkIiB4Mj0iMCIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLW9wYWNpdHk9Ii4xIiBzdG9wLWNvbG9yPSIjRUVFIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxtYXNrIGlkPSJmbUxpZSI+PHJlY3Qgd2lkdGg9IjEyMTkiIGhlaWdodD0iMjAwIiByeD0iMzAiIGZpbGw9IiNGRkYiLz48L21hc2s+CiAgPGcgbWFzaz0idXJsKCNmbUxpZSkiPgogICAgPHJlY3Qgd2lkdGg9IjI2OSIgaGVpZ2h0PSIyMDAiIGZpbGw9IiM1NTUiLz4KICAgIDxyZWN0IHdpZHRoPSI5NTAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDhDIiB4PSIyNjkiLz4KICAgIDxyZWN0IHdpZHRoPSIxMjE5IiBoZWlnaHQ9IjIwMCIgZmlsbD0idXJsKCNGV0NkZCkiLz4KICA8L2c+CiAgPGcgYXJpYS1oaWRkZW49InRydWUiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9IlZlcmRhbmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPgogICAgPHRleHQgeD0iMTkwIiB5PSIxNDgiIHRleHRMZW5ndGg9IjM5IiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIwLjI1Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMTgwIiB5PSIxMzgiIHRleHRMZW5ndGg9IjM5Ij4gPC90ZXh0PgogICAgPHRleHQgeD0iMzI0IiB5PSIxNDgiIHRleHRMZW5ndGg9Ijg1MCIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iMC4yNSI+T3BlbiBpbiBHaXRIdWI8L3RleHQ+CiAgICA8dGV4dCB4PSIzMTQiIHk9IjEzOCIgdGV4dExlbmd0aD0iODUwIj5PcGVuIGluIEdpdEh1YjwvdGV4dD4KICA8L2c+CiAgPGltYWdlIHg9IjQwIiB5PSIzNSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMzAiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIWnBaWGRDYjNnOUlqQWdNQ0EwT1RZZ05URXlJajQ4Y0dGMGFDQm1hV3hzUFNJalptWm1JaUJrUFNKTk1UWTFMamtnTXprM0xqUmpNQ0F5TFRJdU15QXpMall0TlM0eUlETXVOaTB6TGpNdU15MDFMall0TVM0ekxUVXVOaTB6TGpZZ01DMHlJREl1TXkwekxqWWdOUzR5TFRNdU5pQXpMUzR6SURVdU5pQXhMak1nTlM0MklETXVObnB0TFRNeExqRXROQzQxWXkwdU55QXlJREV1TXlBMExqTWdOQzR6SURRdU9TQXlMallnTVNBMUxqWWdNQ0EyTGpJdE1uTXRNUzR6TFRRdU15MDBMak10TlM0eVl5MHlMall0TGpjdE5TNDFMak10Tmk0eUlESXVNM3B0TkRRdU1pMHhMamRqTFRJdU9TNDNMVFF1T1NBeUxqWXROQzQySURRdU9TNHpJRElnTWk0NUlETXVNeUExTGprZ01pNDJJREl1T1MwdU55QTBMamt0TWk0MklEUXVOaTAwTGpZdExqTXRNUzQ1TFRNdE15NHlMVFV1T1MweUxqbDZUVEkwTkM0NElEaERNVEEyTGpFZ09DQXdJREV4TXk0eklEQWdNalV5WXpBZ01URXdMamtnTmprdU9DQXlNRFV1T0NBeE5qa3VOU0F5TXprdU1pQXhNaTQ0SURJdU15QXhOeTR6TFRVdU5pQXhOeTR6TFRFeUxqRWdNQzAyTGpJdExqTXROREF1TkMwdU15MDJNUzQwSURBZ01DMDNNQ0F4TlMwNE5DNDNMVEk1TGpnZ01DQXdMVEV4TGpRdE1qa3VNUzB5Tnk0NExUTTJMallnTUNBd0xUSXlMamt0TVRVdU55QXhMall0TVRVdU5DQXdJREFnTWpRdU9TQXlJRE00TGpZZ01qVXVPQ0F5TVM0NUlETTRMallnTlRndU5pQXlOeTQxSURjeUxqa2dNakF1T1NBeUxqTXRNVFlnT0M0NExUSTNMakVnTVRZdE16TXVOeTAxTlM0NUxUWXVNaTB4TVRJdU15MHhOQzR6TFRFeE1pNHpMVEV4TUM0MUlEQXRNamN1TlNBM0xqWXROREV1TXlBeU15NDJMVFU0TGprdE1pNDJMVFl1TlMweE1TNHhMVE16TGpNZ01pNDJMVFkzTGprZ01qQXVPUzAyTGpVZ05qa2dNamNnTmprZ01qY2dNakF0TlM0MklEUXhMalV0T0M0MUlEWXlMamd0T0M0MWN6UXlMamdnTWk0NUlEWXlMamdnT0M0MVl6QWdNQ0EwT0M0eExUTXpMallnTmprdE1qY2dNVE11TnlBek5DNDNJRFV1TWlBMk1TNDBJREl1TmlBMk55NDVJREUySURFM0xqY2dNalV1T0NBek1TNDFJREkxTGpnZ05UZ3VPU0F3SURrMkxqVXROVGd1T1NBeE1EUXVNaTB4TVRRdU9DQXhNVEF1TlNBNUxqSWdOeTQ1SURFM0lESXlMamtnTVRjZ05EWXVOQ0F3SURNekxqY3RMak1nTnpVdU5DMHVNeUE0TXk0MklEQWdOaTQxSURRdU5pQXhOQzQwSURFM0xqTWdNVEl1TVVNME1qZ3VNaUEwTlRjdU9DQTBPVFlnTXpZeUxqa2dORGsySURJMU1pQTBPVFlnTVRFekxqTWdNemd6TGpVZ09DQXlORFF1T0NBNGVrMDVOeTR5SURNMU1pNDVZeTB4TGpNZ01TMHhJRE11TXk0M0lEVXVNaUF4TGpZZ01TNDJJRE11T1NBeUxqTWdOUzR5SURFZ01TNHpMVEVnTVMwekxqTXRMamN0TlM0eUxURXVOaTB4TGpZdE15NDVMVEl1TXkwMUxqSXRNWHB0TFRFd0xqZ3RPQzR4WXkwdU55QXhMak11TXlBeUxqa2dNaTR6SURNdU9TQXhMallnTVNBekxqWXVOeUEwTGpNdExqY3VOeTB4TGpNdExqTXRNaTQ1TFRJdU15MHpMamt0TWkwdU5pMHpMall0TGpNdE5DNHpMamQ2YlRNeUxqUWdNelV1Tm1NdE1TNDJJREV1TXkweElEUXVNeUF4TGpNZ05pNHlJREl1TXlBeUxqTWdOUzR5SURJdU5pQTJMalVnTVNBeExqTXRNUzR6TGpjdE5DNHpMVEV1TXkwMkxqSXRNaTR5TFRJdU15MDFMakl0TWk0MkxUWXVOUzB4ZW0wdE1URXVOQzB4TkM0M1l5MHhMallnTVMweExqWWdNeTQySURBZ05TNDVJREV1TmlBeUxqTWdOQzR6SURNdU15QTFMallnTWk0eklERXVOaTB4TGpNZ01TNDJMVE11T1NBd0xUWXVNaTB4TGpRdE1pNHpMVFF0TXk0ekxUVXVOaTB5ZWlJdlBqd3ZjM1puUGdvPSIvPgo8L3N2Zz4=" alt="Open in GitHub"></a>
+                                </h4>
+                                <h4>Optimize code based on a query using the Google PaLM 2 text model<h4>
+                                <h5>Usage</h5>
+                                <pre><code class="language-r">palm.txt.optimize.code(model.parameter,
+                       prompt,
+                       goal,
+                       language = "R",
+                       temperature = 0.7,
+                       maxOutputTokens = 1024,
+                       topP = 0.95,
+                       topK = 40,
+                       htUnspecified = "meda",
+                       htDerogatory = "meda",
+                       htToxicity = "meda",
+                       htViolence = "meda",
+                       htSexual = "meda",
+                       htMedical = "meda",
+                       htDangerous = "meda")</code></pre>
+                                <h5>Arguments</h5>
+                                <ul>
+                                  <li><code>model.parameter</code>: A character vector containing the API key, model version, and proxy status. Model version and type
+                                    are specified by Google. See function <code><a href="#palm_connect">palm.connect</a></code> for detail.</li>
+
+                                  <li><code>prompt</code>: A character string representing the query or prompt for text generation. The length of the query should
+                                    be between 1 and 8196 characters, inclusive.</li>
+
+                                  <li><code>goal</code>: A character string specifying the aspect you want to optimize.</li>
+
+                                  <li><code>language</code>: A character string specifying the programming language used in the code (default: "R").</li>
+
+                                  <li><code>temperature</code>: A numeric value between 0.0 and 1.0, inclusive (default: 0.7). Controls the randomness of the generated text.
+                                    A higher value (e.g., 0.9) results in more creative responses, while a lower value (e.g., 0.3) produces more straightforward text.</li>
+
+                                  <li><code>maxOutputTokens</code>: An integer value (default: 1024). Specifies the maximum number of tokens to include in the generated text.</li>
+
+                                  <li><code>topP</code>: A numeric value (default: 0.95). Defines the maximum cumulative probability of tokens considered when sampling. It controls the diversity of the text generated.</li>
+
+                                  <li><code>topK</code>: An integer value (default: 40). Sets the maximum number of tokens to consider when sampling.</li>
+
+                                  <li><code>htUnspecified</code>: Safety setting threshold for unspecified harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDerogatory</code>: Safety setting threshold for derogatory harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htToxicity</code>: Safety setting threshold for toxicity harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htViolence</code>: Safety setting threshold for violence harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htSexual</code>: Safety setting threshold for sexual harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htMedical</code>: Safety setting threshold for medical harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+
+                                  <li><code>htDangerous</code>: Safety setting threshold for dangerous harm. The default threshold is "meda". Valid options are as follows.
+                                    <ul>
+                                      <li><code>"unsp"</code>: HARM_BLOCK_THRESHOLD_UNSPECIFIED</li>
+                                      <li><code>"lowa"</code>: BLOCK_LOW_AND_ABOVE</li>
+                                      <li><code>"meda"</code>: BLOCK_MEDIUM_AND_ABOVE</li>
+                                      <li><code>"high"</code>: BLOCK_ONLY_HIGH</li>
+                                      <li><code>"none"</code>: BLOCK_NONE</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                                <h5>Value</h5>
+                                <p>
+                                    A character string containing the optimized version of the provided code snippet based on the query and parameters.
+                                </p>
+                                <h5>Description</h5>
+                                <p>
+                                    This function sends a query with a code snippet to the Google PaLM 2 text model and generates an optimized version of the code. You can specify the programming language and the aspect you want to optimize (e.g., "runtime" or "memory"). The optimized code is provided along with the original code for comparison.
+                                </p>
+                                <h5>Detail</h5>
+                                <p>
+                                    This function interacts with the Google PaLM model by sending a code query for code optimization. It allows you to customize the generated code optimizations by specifying the programming language, optimization aspect, and additional parameters like temperature, token limits, and safety settings.
+                                </p>
+                                <p>
+                                    If the function is successful, it returns an optimized version of the provided code as a character string. If an error occurs during the API request, it will stop execution and provide an error message.
+                                </p>
+                                <p>
+                                    The <code>model.parameter</code> argument should be a character vector with the API key, model version, and model type provided by Google. You can obtain this information by following the instructions provided by Google for using the PaLM API.
+                                </p>
+                                <p>
+                                    The safety settings control the content's safety level based on different harm categories. Harm thresholds are specified as per Google's guidelines and can be customized to control the content generated.
+                                </p>
+                                <div class="accordion" id="accordionDefault">
+                                  <div class="card">
+                                    <div class="card-header" id="palm_txt_optimize_code_ex">
+                                      <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#palm_txt_optimize_code_ex_collapse" aria-expanded="true">Example</a> </h5>
+                                    </div>
+                                    <div id="palm_txt_optimize_code_ex_collapse" class="collapse" data-parent="#accordionDefault">
+                                      <div class="card-body">
+                                        <a target="_blank" href="https://colab.research.google.com/github/lygitdata/PaLMr/blob/gh-pages/example/palmr_examples.ipynb">
+                                          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTE3IiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMTciIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjZmZmIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoMzB2MjBIMHoiLz48cGF0aCBmaWxsPSIjMDA3ZWM2IiBkPSJNMzAgMGg4N3YyMEgzMHoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDExN3YyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiPjxzdmcgeD0iNHB4IiB5PSIwcHgiIHdpZHRoPSIyMnB4IiBoZWlnaHQ9IjIwcHgiIHZpZXdCb3g9Ii0yIDAgMjggMjQiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO2JvcmRlci1yYWRpdXM6IDFweDsiPjxwYXRoIHN0eWxlPSJmaWxsOiNlODcxMGE7IiBkPSJNMS45NzcsMTYuNzdjLTIuNjY3LTIuMjc3LTIuNjA1LTcuMDc5LDAtOS4zNTdDMi45MTksOC4wNTcsMy41MjIsOS4wNzUsNC40OSw5LjY5MWMtMS4xNTIsMS42LTEuMTQ2LDMuMjAxLTAuMDA0LDQuODAzQzMuNTIyLDE1LjExMSwyLjkxOCwxNi4xMjYsMS45NzcsMTYuNzd6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2Y5YWIwMDsiIGQ9Ik0xMi4yNTcsMTcuMTE0Yy0xLjc2Ny0xLjYzMy0yLjQ4NS0zLjY1OC0yLjExOC02LjAyYzAuNDUxLTIuOTEsMi4xMzktNC44OTMsNC45NDYtNS42NzhjMi41NjUtMC43MTgsNC45NjQtMC4yMTcsNi44NzgsMS44MTljLTAuODg0LDAuNzQzLTEuNzA3LDEuNTQ3LTIuNDM0LDIuNDQ2QzE4LjQ4OCw4LjgyNywxNy4zMTksOC40MzUsMTYsOC44NTZjLTIuNDA0LDAuNzY3LTMuMDQ2LDMuMjQxLTEuNDk0LDUuNjQ0Yy0wLjI0MSwwLjI3NS0wLjQ5MywwLjU0MS0wLjcyMSwwLjgyNkMxMy4yOTUsMTUuOTM5LDEyLjUxMSwxNi4zLDEyLjI1NywxNy4xMTR6Ii8+PHBhdGggc3R5bGU9ImZpbGw6I2U4NzEwYTsiIGQ9Ik0xOS41MjksOS42ODJjMC43MjctMC44OTksMS41NS0xLjcwMywyLjQzNC0yLjQ0NmMyLjcwMywyLjc4MywyLjcwMSw3LjAzMS0wLjAwNSw5Ljc2NGMtMi42NDgsMi42NzQtNi45MzYsMi43MjUtOS43MDEsMC4xMTVjMC4yNTQtMC44MTQsMS4wMzgtMS4xNzUsMS41MjgtMS43ODhjMC4yMjgtMC4yODUsMC40OC0wLjU1MiwwLjcyMS0wLjgyNmMxLjA1MywwLjkxNiwyLjI1NCwxLjI2OCwzLjYsMC44M0MyMC41MDIsMTQuNTUxLDIxLjE1MSwxMS45MjcsMTkuNTI5LDkuNjgyeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNNC40OSw5LjY5MUMzLjUyMiw5LjA3NSwyLjkxOSw4LjA1NywxLjk3Nyw3LjQxM2MyLjIwOS0yLjM5OCw1LjcyMS0yLjk0Miw4LjQ3Ni0xLjM1NWMwLjU1NSwwLjMyLDAuNzE5LDAuNjA2LDAuMjg1LDEuMTI4Yy0wLjE1NywwLjE4OC0wLjI1OCwwLjQyMi0wLjM5MSwwLjYzMWMtMC4yOTksMC40Ny0wLjUwOSwxLjA2Ny0wLjkyOSwxLjM3MUM4LjkzMyw5LjUzOSw4LjUyMyw4Ljg0Nyw4LjAyMSw4Ljc0NkM2LjY3Myw4LjQ3NSw1LjUwOSw4Ljc4Nyw0LjQ5LDkuNjkxeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNmOWFiMDA7IiBkPSJNMS45NzcsMTYuNzdjMC45NDEtMC42NDQsMS41NDUtMS42NTksMi41MDktMi4yNzdjMS4zNzMsMS4xNTIsMi44NSwxLjQzMyw0LjQ1LDAuNDk5YzAuMzMyLTAuMTk0LDAuNTAzLTAuMDg4LDAuNjczLDAuMTljMC4zODYsMC42MzUsMC43NTMsMS4yODUsMS4xODEsMS44OWMwLjM0LDAuNDgsMC4yMjIsMC43MTUtMC4yNTMsMS4wMDZDNy44NCwxOS43Myw0LjIwNSwxOS4xODgsMS45NzcsMTYuNzd6Ii8+PC9zdmc+PHRleHQgeD0iMjQ1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiB0ZXh0TGVuZ3RoPSIzMCI+IDwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE1MCIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIHRleHRMZW5ndGg9Ijc3MCI+T3BlbiBpbiBDb2xhYjwvdGV4dD48L2c+IDwvc3ZnPgo=" alt="Open In Colab"/>
+                                        </a>
+                                        <pre><code class="language-r">palm.model = palm.connect("v1beta3",
+                          "API_KEY",
+                          FALSE)
+palm.model
+
+prompt = "foo <- function(n) {
+            if (n <= 0) {
+              return(0)
+            } else if (n == 1) {
+              return(1)
+            } else {
+              return(foo(n - 1) + foo(n - 2))
+            }
+          }"
+code.optimization = palm.txt.optimize.code(palm.model,
+                                           "Improve the runtime.",
+                                           prompt)
+cat(code.optimization)</code></pre>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <h5>See Also</h5>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/SafetySetting" target="_blank">Safety Setting - Google AI for Developers</a>
+                                </p>
+                                <p>
+                                    <a href="https://ai.google.dev/api/rest/v1beta/HarmCategory" target="_blank">HarmCategory - Google AI for Developers</a>
+                                </p>
+                            </section>
+
+                            <hr style="border-top: dotted 1px; color: grey;" />
+                            
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer" class="section bg-dark footer-text-light">
+                <div class="container">
+                    <p class="text-center">
+                        &copy; <script type="text/JavaScript"> document.write(new Date().getFullYear()) </script> LY.GD.EDU.KG
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+        <script src="https://static.gd.edu.kg/js/kb/jquery.min.js"></script> 
+        <script src="https://static.gd.edu.kg/js/kb/bootstrap.bundle.min.js"></script> 
+        <script src="https://static.gd.edu.kg/js/kb/highlight.min.js"></script> 
+        <script src="https://static.gd.edu.kg/js/kb/jquery.easing.min.js"></script> 
+        <script src="https://static.gd.edu.kg/js/kb/jquery.magnific-popup.min.js"></script> 
+        <script src="https://static.gd.edu.kg/js/kb/theme.js"></script>
+        <script src="https://static.gd.edu.kg/js/fontawesome.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/r.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>
