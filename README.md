@@ -6,7 +6,7 @@
 
 # PaLMr - Interface for Google Pathways Language Model (PaLM)
 
-<img src="https://palmr.r.ly.gd.edu.kg/img/PaLMr_logo.svg" width="100px">
+<img src="https://palmr.ly.gd.edu.kg/img/PaLMr_logo.svg" width="100px">
 
 ## 1. Basic Information
 
