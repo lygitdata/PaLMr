@@ -16,7 +16,7 @@
 
 **Author**: Li Yuan
 
-**Maintainer**: Li Yuan <lyuan at gd.edu.kg>
+**Maintainer**: Li Yuan &lt;lyuan at gd.edu.kg&gt;
 
 **BugReports**: https://github.com/lygitdata/PaLMr/issues
 
