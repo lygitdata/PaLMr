@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://palmr.r.ly.gd.edu.kg/sitemap.xml
+Sitemap: https://palmr.ly.gd.edu.kg/sitemap.xml
