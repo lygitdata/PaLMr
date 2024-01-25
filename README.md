@@ -2,7 +2,7 @@
 
 *Last update: 2024/01/21*
 
-[![](https://www.r-pkg.org/badges/version/PaLMr?color=green)](https://cran.r-project.org/package=PaLMr)
+[![](https://img.shields.io/cran/v/PaLMr?color=green)](https://cran.r-project.org/package=PaLMr)
 ![](https://cranlogs.r-pkg.org/badges/grand-total/PaLMr)
 
 > NOTICE:
